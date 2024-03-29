@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:layout_margin="3dp"
+    android:paddingStart="@dimen/dp_32"
+    android:paddingEnd="@dimen/dp_32">
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/img_log_in_biometric"
+        android:layout_width="@dimen/dp_80"
+        android:layout_height="@dimen/dp_80"
+        android:layout_gravity="center"
+        android:layout_marginTop="@dimen/dp_32"
+        app:srcCompat="@drawable/ic_asterisk" />
+
+    <TextView
+        android:id="@+id/tv_message"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="16dp"
+        android:textColor="@color/colorPrimary"
+        android:textSize="16sp"
+        android:layout_marginBottom="@dimen/dp_8"
+        android:textStyle="normal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:gravity="center"
+        tools:text="You need to enable NFC in Setting" />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:layout_gravity="center"
+        android:layout_margin="33dp"
+        android:weightSum="2">
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btn_cancel"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_marginRight="5dp"
+            android:layout_alignParentBottom="true"
+            android:background="@drawable/btn_bg_transparent"
+            android:text="@string/Cancel"
+            android:textAllCaps="false"
+            android:textColor="@color/black"
+            android:textSize="@dimen/sp_16"/>
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btn_OpenSetting"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_alignParentBottom="true"
+            android:text="OK"
+            android:layout_marginLeft="5dp"
+            android:textAllCaps="false"
+            android:textColor="@color/black"
+            android:textSize="@dimen/sp_16"
+            android:background="@drawable/btn_bg_transparent" />
+
+    </LinearLayout>
+
+</LinearLayout>

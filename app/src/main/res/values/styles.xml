@@ -1,0 +1,31 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+
+    <style name="AppTheme.AppBarOverlay" parent="ThemeOverlay.MaterialComponents.ActionBar"/>
+
+    <style name="AppTheme.PopupOverlay" parent="ThemeOverlay.MaterialComponents.Light"/>
+
+    <!--TextView Styles-->
+    <style name="AppTheme.TextView.Medium" parent="Widget.AppCompat.TextView">
+        <item name="android:textColor">@color/colorTextDark</item>
+        <item name="android:fontFamily">@font/calibri_regular</item>
+        <item name="android:textAppearance">@style/TextAppearance.AppCompat.Medium</item>
+    </style>
+
+    <style name="BoldView" parent="@android:style/TextAppearance.Medium">
+        <item name="fontFamily">@assets/fonts/calibri_regular</item>
+    </style>
+
+    <style name="cardRemoveDialog" parent="Theme.AppCompat.Light.Dialog.Alert">
+        <item name="android:windowBackground">@drawable/btn_of_dialog</item>
+        <item name="android:forceDarkAllowed" tools:targetApi="q">false</item>
+    </style>
+
+    <!-- styles.xml -->
+    <style name="select_paym">
+        <item name="android:textSize">40sp</item>
+        <item name="android:textColor">#24272A</item>
+    </style>
+
+
+
+</resources>

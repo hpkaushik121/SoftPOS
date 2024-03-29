@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#95000000">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingLeft="16dp"
+            android:paddingTop="32dp"
+            android:layout_marginTop="20dp"
+            android:paddingRight="16dp"
+            android:background="@drawable/rounded_corner_top"
+            app:layout_constraintBottom_toBottomOf="parent"
+            >
+
+            <ScrollView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_horizontal"
+                    android:orientation="vertical"
+                    android:paddingLeft="@dimen/dp_30"
+                    android:paddingRight="@dimen/dp_30">
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:id="@+id/center_ncc"
+                        android:layout_width="wrap_content"
+                        android:layout_height="@dimen/dp_50"
+                        android:layout_weight="90"
+                        android:gravity="center"
+                        android:visibility="gone"
+                        app:srcCompat="@drawable/ic_logo" />
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:id="@+id/idRightImg"
+                        android:layout_width="@dimen/dp_120"
+                        android:layout_height="@dimen/dp_100"
+                        android:layout_marginTop="@dimen/dp_70"
+                        android:src="@drawable/ic_success" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/dp_65"
+                        android:gravity="center"
+                        android:text="@string/terminal_link_successful"
+                        android:textColor="@color/color_success"
+                        android:textSize="@dimen/sp_20"
+                        android:textStyle="bold" />
+
+                    <androidx.appcompat.widget.AppCompatButton
+                        android:id="@+id/btnProceedToDashboard"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/dp_55"
+                        android:layout_marginTop="@dimen/dp_48"
+                        android:layout_marginBottom="@dimen/dp_32"
+                        android:background="@drawable/button_base"
+                        android:gravity="center"
+                        android:textAllCaps="false"
+                        android:text="@string/proceed_to_dashboard"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/sp_14" />
+                </LinearLayout>
+            </ScrollView>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

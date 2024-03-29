@@ -1,0 +1,363 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/root_layout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:id="@+id/ll_top"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:background="@drawable/ic_otp_bg"
+                android:orientation="vertical"
+                app:layout_constraintHeight_percent="0.3"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <include
+                    android:id="@+id/header"
+                    layout="@layout/header_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/header_height" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:layout_width="@dimen/dp_48"
+                        android:layout_height="@dimen/dp_48"
+                        android:layout_gravity="center"
+                        android:src="@drawable/profile_circle" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/userNameOnProfile"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="@dimen/dp_10"
+                        android:text=""
+                        android:textColor="@color/orange_e9"
+                        android:textSize="@dimen/sp_16"
+                        android:textStyle="bold" />
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="@dimen/dp_10"
+                        android:orientation="horizontal">
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:id="@+id/textTerminalLinkOnProfile"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_marginRight="@dimen/dp_2"
+                            android:text="@string/wallet_linked"
+                            android:textColor="@color/gray_text"
+                            android:textSize="@dimen/sp_14" />
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:id="@+id/textWalletOnProfile"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_marginLeft="@dimen/dp_2"
+                            android:text=""
+                            android:textColor="@color/edit_email_wallet_hint_color"
+                            android:textSize="@dimen/sp_14" />
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/ll_bottom"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_marginLeft="@dimen/dp_20"
+                android:layout_marginRight="@dimen/dp_20"
+                android:orientation="vertical"
+                android:paddingTop="@dimen/dp_20"
+                app:layout_constraintHeight_percent="0.7"
+                app:layout_constraintTop_toBottomOf="@+id/ll_top">
+
+                <LinearLayout
+                    android:id="@+id/ll_biometric"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/background_for_biometric_edit"
+                    android:orientation="vertical"
+                    android:paddingLeft="16dp"
+                    android:paddingTop="8dp"
+                    android:paddingBottom="8dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/biometric_login_text"
+                        android:textColor="@color/edit_email_wallet_hint_color"
+                        android:textSize="16sp" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="left|center"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:id="@+id/text_turnOnOffLeft"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/turn_off"
+                            android:textColor="#6C6C6C"
+                            android:textSize="16sp" />
+
+                        <androidx.appcompat.widget.SwitchCompat
+                            android:id="@+id/toggle_biometric_btn"
+                            android:layout_width="wrap_content"
+                            android:layout_height="20dp"
+                            android:layout_centerHorizontal="true"
+                            android:buttonTint="@color/blue"
+                            android:elevation="4dp"
+                            android:gravity="center"
+                            android:textColor="#f00"
+                            app:thumbTint="@color/white"
+                            app:trackTint="@color/blue" />
+
+                        <TextView
+                            android:id="@+id/text_turnOnOffRight"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/turn_on"
+                            android:textColor="#BAB4B4"
+                            android:textSize="14sp" />
+                    </LinearLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/ll_terms_and_policy"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/dp_20"
+                    android:background="@drawable/background_for_biometric_edit"
+                    android:orientation="horizontal"
+                    android:paddingLeft="16dp"
+                    android:paddingTop="8dp"
+                    android:paddingBottom="8dp"
+                    android:weightSum="5"
+                    app:layout_constraintTop_toBottomOf="@+id/ll_biometric">
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_weight="4"
+                        android:padding="@dimen/dp_12"
+                        android:text="@string/terms_of_use"
+                        android:textColor="@color/edit_email_wallet_hint_color" />
+
+                    <!--<androidx.appcompat.widget.AppCompatImageView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center|right"
+                        android:layout_marginRight="@dimen/dp_20"
+                        android:layout_weight="1"
+                        android:src="@drawable/ic_arrow_forward_24" />-->
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/ll_move_funds"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/dp_20"
+                    android:background="@drawable/background_for_biometric_edit"
+                    android:orientation="horizontal"
+                    android:paddingLeft="16dp"
+                    android:paddingTop="8dp"
+                    android:paddingBottom="8dp"
+                    android:visibility="gone"
+                    android:weightSum="5"
+                    app:layout_constraintTop_toBottomOf="@+id/ll_terms_and_policy">
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_weight="4"
+                        android:padding="@dimen/dp_12"
+                        android:text="@string/move_funds_wallet"
+                        android:textColor="@color/edit_email_wallet_hint_color" />
+
+                    <!-- <androidx.appcompat.widget.AppCompatImageView
+                         android:layout_width="0dp"
+                         android:layout_height="wrap_content"
+                         android:layout_gravity="center|right"
+                         android:layout_marginRight="@dimen/dp_20"
+                         android:layout_weight="1"
+                         android:src="@drawable/ic_arrow_forward_24" />-->
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/ll_secure_wallet"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/dp_20"
+                    android:background="@drawable/background_for_biometric_edit"
+                    android:orientation="horizontal"
+                    android:paddingLeft="16dp"
+                    android:paddingTop="8dp"
+                    android:paddingBottom="8dp"
+                    android:weightSum="5"
+                    app:layout_constraintTop_toBottomOf="@+id/ll_move_funds">
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_weight="4"
+                        android:padding="@dimen/dp_12"
+                        android:text="@string/secure_wallet"
+                        android:textColor="@color/edit_email_wallet_hint_color" />
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/ll_logout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="bottom"
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:orientation="vertical">
+
+                        <androidx.appcompat.widget.AppCompatImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:src="@drawable/ic_logout" />
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/log_out" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:paddingBottom="@dimen/dp_10"
+                        android:paddingLeft="@dimen/dp_50"
+                        android:paddingRight="@dimen/dp_50"
+                        android:layout_marginTop="@dimen/dp_10"
+                        android:weightSum="2">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:gravity="left"
+                            android:orientation="horizontal">
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:gravity="right"
+                                android:textColor="@color/version_name_color"
+                                android:text="Version " />
+                            <TextView
+                                android:id="@+id/textVersionName"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:gravity="right"
+                                android:textColor="@color/terminal_unlink_text_color"
+                               android:layout_marginEnd="@dimen/dp_8"
+                                android:text="" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:gravity="right"
+                            android:orientation="horizontal">
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:gravity="right"
+                                android:textColor="@color/version_name_color"
+                                android:text="Build " />
+                            <TextView
+                                android:id="@+id/textBuildname"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:gravity="right"
+                                android:textColor="@color/terminal_unlink_text_color"
+                                android:layout_marginEnd="@dimen/dp_8"
+                                android:text="" />
+                        </LinearLayout>
+                    </LinearLayout>
+
+
+                </LinearLayout>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/progress_layout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:visibility="gone">
+
+            <ProgressBar
+                android:id="@+id/progress_bar"
+                style="?android:attr/progressBarStyleLarge"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/img_success"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_success"
+                android:visibility="gone"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+            </androidx.appcompat.widget.AppCompatImageView>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

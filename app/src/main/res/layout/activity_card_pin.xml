@@ -1,0 +1,380 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:padding="@dimen/dp_30">
+
+            <!--1st Start-->
+            <LinearLayout
+                android:id="@+id/backArrowImgLL"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp_40"
+                android:layout_marginTop="@dimen/dp_40"
+                android:orientation="horizontal"
+                android:weightSum="100"
+                app:layout_constraintBottom_toTopOf="@+id/idPinCircleTextLL"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/backArrowBtn"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="8"
+                    android:gravity="left|center"
+                    app:srcCompat="@drawable/ic_arrow_black" />
+
+                <TextView
+                    android:id="@+id/tv_toolbar_dashboard"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_weight="92"
+                    android:gravity="left|center"
+                    android:paddingLeft="20dp"
+                    android:text="@string/card_pin_validation"
+                    android:textColor="@color/color_success"
+                    android:textSize="@dimen/sp_20"
+                    android:textStyle="bold" />
+            </LinearLayout>
+
+
+            <!--2nd Start-->
+            <LinearLayout
+                android:id="@+id/idPinCircleTextLL"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dp_40"
+                android:layout_weight="2"
+                android:gravity="bottom"
+                android:orientation="vertical"
+                app:layout_constraintBottom_toTopOf="@+id/idView1"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/backArrowImgLL">
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="left"
+                    android:text="@string/hey_there"
+                    android:textColor="#495260"
+                    android:textSize="@dimen/sp_16"
+                    android:textStyle="bold" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="left"
+                    android:text="@string/what_is_card_pin"
+                    android:textColor="#495260"
+                    android:textSize="@dimen/sp_14"
+                    android:textStyle="normal" />
+
+
+            </LinearLayout>
+
+
+            <View
+                android:id="@+id/idView1"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginTop="@dimen/dp_20"
+                android:background="#988F82"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/idPinCircleTextLL" />
+
+
+            <LinearLayout
+                android:id="@+id/idNoCountLLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dp_5"
+                android:orientation="vertical"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/idView1">
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/txt_payable_amount"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:visibility="gone"
+                    tools:visibility="visible"
+                    android:text="@string/payable_amount"
+                    android:textColor="#988F82"
+                    android:textSize="@dimen/sp_14"
+                    android:textStyle="normal" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/txtAmount"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text=""
+                    android:textColor="#262729"
+                    android:textSize="@dimen/sp_16"
+                    android:textStyle="bold" />
+
+            </LinearLayout>
+
+            <View
+                android:id="@+id/idView2"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginTop="@dimen/dp_5"
+                android:background="#988F82"
+
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/idNoCountLLayout" />
+
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/pin_view"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="@dimen/dp_20"
+                android:orientation="vertical"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/idView2">
+
+                <LinearLayout
+                    android:id="@+id/linearUpperEdittext"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:weightSum="4"
+                    android:orientation="horizontal"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintTop_toTopOf="parent">
+
+                    <LinearLayout
+                        android:layout_width="@dimen/dp_45"
+                        android:layout_height="@dimen/dp_55"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:layout_marginRight="@dimen/dp_8"
+                        android:background="@drawable/pin_view_frame"
+                        android:orientation="vertical">
+
+                        <EditText
+                            android:id="@+id/edt1Pin"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:gravity="center"
+                            android:hint=""
+                            android:inputType="number"
+                            android:maxLength="1"
+                            android:background="@color/transparent"
+                            android:padding="@dimen/dp_5"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/sp_22"
+                            android:textStyle="bold"
+                            android:transitionName="pin1" />
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_width="@dimen/dp_45"
+                        android:layout_height="@dimen/dp_55"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:layout_marginRight="@dimen/dp_8"
+                        android:layout_marginLeft="@dimen/dp_8"
+                        android:background="@drawable/pin_view_frame"
+                        android:orientation="vertical">
+                        <EditText
+                            android:id="@+id/edt2Pin"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:gravity="center"
+                            android:hint=""
+                            android:inputType="number"
+                            android:maxLength="1"
+                            android:background="@color/transparent"
+                            android:padding="@dimen/dp_5"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/sp_22"
+                            android:textStyle="bold" />
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_width="@dimen/dp_45"
+                        android:layout_height="@dimen/dp_55"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:layout_marginRight="@dimen/dp_8"
+                        android:layout_marginLeft="@dimen/dp_8"
+                        android:background="@drawable/pin_view_frame"
+                        android:orientation="vertical">
+                        <EditText
+                            android:id="@+id/edt3Pin"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:gravity="center"
+                            android:hint=""
+                            android:inputType="number"
+                            android:maxLength="1"
+                            android:background="@color/transparent"
+                            android:padding="@dimen/dp_5"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/sp_22"
+                            android:textStyle="bold"/>
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_width="@dimen/dp_45"
+                        android:layout_height="@dimen/dp_55"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:layout_marginLeft="@dimen/dp_8"
+                        android:background="@drawable/pin_view_frame"
+                        android:orientation="vertical">
+                        <EditText
+                            android:id="@+id/edt4Pin"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:gravity="center"
+                            android:hint=""
+                            android:inputType="number"
+                            android:maxLength="1"
+                            android:background="@color/transparent"
+                            android:padding="@dimen/dp_5"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/sp_22"
+                            android:textStyle="bold" />
+                    </LinearLayout>
+
+
+
+                   <!-- <EditText
+                        android:id="@+id/editTextUpper2"
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:fontFamily="monospace"
+                        android:gravity="center"
+                        android:inputType="number"
+                        android:maxLength="1"
+                        android:textSize="24sp"
+                        android:transitionName="pin2" />
+
+                    <EditText
+                        android:id="@+id/editTextUpper3"
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:fontFamily="monospace"
+                        android:gravity="center"
+                        android:inputType="number"
+                        android:maxLength="1"
+                        android:textSize="24sp"
+                        android:transitionName="pin3" />
+
+                    <EditText
+                        android:id="@+id/editTextUpper4"
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:fontFamily="monospace"
+                        android:gravity="center"
+                        android:inputType="number"
+                        android:maxLength="1"
+                        android:textSize="24sp"
+                        android:transitionName="pin4" />-->
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_marginTop="@dimen/dp_30"
+                    app:layout_constraintTop_toBottomOf="@+id/linearUpperEdittext"
+                    android:id="@+id/ll_pin_instruction"
+                    android:orientation="vertical"
+                    android:background="@drawable/layout_border"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:layout_gravity="center"
+                        android:padding="@dimen/dp_5"
+                        android:textColor="#DC6803"
+                        android:fontFamily="@font/inter_bold"
+                        android:textSize="@dimen/sp_14"
+                        android:text="@string/pin_instruction_customer"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
+
+                    </androidx.appcompat.widget.AppCompatTextView>
+
+                </LinearLayout>
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+            <LinearLayout
+                android:id="@+id/confirmLLayout"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp_50"
+                android:layout_marginTop="@dimen/dp_70"
+                android:orientation="vertical"
+                android:padding="@dimen/dp_2"
+                app:layout_constraintBottom_toTopOf="@id/cancelPaymentLLayout"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/pin_view">
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/btn_confirm_pin"
+                    style="@style/BoldView"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
+                    android:background="@drawable/button_base"
+                    android:gravity="center"
+                    android:padding="@dimen/dp_8"
+                    android:text="@string/confirm"
+                    android:textAllCaps="false"
+                    android:textColor="@color/white"
+                    tools:ignore="TouchTargetSizeCheck" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/cancelPaymentLLayout"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp_50"
+                android:layout_marginTop="@dimen/dp_20"
+                android:orientation="vertical"
+                android:padding="@dimen/dp_2"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/confirmLLayout">
+
+                <TextView
+                    android:id="@+id/cancelPaymentTxt"
+                    style="@style/BoldView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:background="@drawable/button_bg_white"
+                    android:gravity="center"
+                    android:padding="@dimen/dp_8"
+                    android:text="@string/cancel_payment"
+                    android:textColor="@color/color_text" />
+
+            </LinearLayout>
+
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </ScrollView>
+</layout>

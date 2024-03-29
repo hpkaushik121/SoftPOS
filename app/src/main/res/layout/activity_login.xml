@@ -1,0 +1,643 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".activities.LoginActivity">
+
+        <ScrollView
+            android:id="@+id/mainScrollView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/constraint_image_back"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dp_170"
+                    tools:ignore="MissingConstraints">
+
+                    <LinearLayout
+                        android:id="@+id/linearLayout"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/ic_otp_bg"
+                        android:gravity="center|top"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintVertical_bias="0.0"
+                        tools:layout_editor_absoluteX="0dp">
+
+                        <ImageView
+                            android:layout_width="@dimen/tap_tap_logo_width"
+                            android:layout_height="@dimen/tap_tap_logo_height"
+                            android:layout_marginTop="@dimen/dp_50"
+                            android:src="@drawable/tap_tap_logo" />
+                    </LinearLayout>
+                </androidx.constraintlayout.widget.ConstraintLayout>
+                <!--Starting of first time login UI-->
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/constraint_firstLogin"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="20dp"
+                    android:visibility="visible"
+                    app:layout_constraintTop_toBottomOf="@+id/constraint_image_back">
+
+                    <LinearLayout
+                        android:id="@+id/linear_logintext"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:gravity="bottom"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="bottom"
+                            android:orientation="horizontal">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:gravity="left|bottom">
+
+                                <TextView
+                                    android:id="@+id/textView"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:gravity="center|bottom"
+                                    android:text="Log In"
+                                    android:textColor="@color/color_success"
+                                    android:textSize="32sp"
+                                    android:textStyle="bold"
+                                    app:layout_constraintStart_toStartOf="parent"
+                                    app:layout_constraintTop_toTopOf="parent"
+                                    tools:ignore="MissingConstraints"
+                                    tools:layout_editor_absoluteY="0dp" />
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_weight="1"
+                                android:orientation="horizontal"
+                                android:layout_marginBottom="@dimen/dp_8"
+                                android:gravity="right|bottom">
+
+                                <LinearLayout
+                                    android:id="@+id/linearLoader1_2_emaiPin"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:background="@drawable/loader1_2"
+                                    android:orientation="horizontal">
+                                </LinearLayout>
+                                <LinearLayout
+                                    android:id="@+id/linearLoader1_3Wallet"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:visibility="gone"
+                                    android:background="@drawable/loader1_3"
+                                    android:orientation="horizontal">
+                                </LinearLayout>
+
+
+                            </LinearLayout>
+                        </LinearLayout>
+                    </LinearLayout>
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:id="@+id/constraint_proceed_text"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="16dp"
+                        app:layout_constraintTop_toBottomOf="@+id/linear_logintext">
+
+                        <TextView
+                            android:id="@+id/textHeadingForLoginFirstTime"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="@string/login_with"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            android:textColor="@color/perform_transaction_color"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:id="@+id/constraint_editetxt"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/dp_24"
+                        app:layout_constraintTop_toBottomOf="@+id/constraint_proceed_text">
+
+                        <LinearLayout
+                            android:id="@+id/linearEmailWalletBackground"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/round_corner_back"
+                            android:orientation="vertical"
+                            android:paddingLeft="16dp"
+                            android:paddingTop="@dimen/dp_8"
+                            android:paddingBottom="@dimen/dp_8"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent">
+
+                            <TextView
+                                android:id="@+id/text_hint_wallet_or_email"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="@string/email_address"
+                                android:textColor="@color/nfc_not_text_color_for_desc"
+                                android:textSize="@dimen/sp_16" />
+
+                            <EditText
+                                android:id="@+id/edit_input_wallet_or_email"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:background="@null"
+                                android:hint="@string/please_input_email_address"
+                                android:inputType="textEmailAddress"
+                                android:paddingTop="@dimen/dp_5"
+                                android:text=""
+                                android:textColorHint="@color/transaction_history_back_layout"
+                                android:textSize="@dimen/sp_16"
+                                tools:ignore="TouchTargetSizeCheck" />
+                        </LinearLayout>
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:id="@+id/textErrorDescForWallet"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/dp_6"
+                        app:layout_constraintTop_toBottomOf="@+id/constraint_editetxt">
+                        <TextView
+                            android:id="@+id/textErrorOnWallet"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textSize="@dimen/sp_13"
+                            android:text="@string/user_not_registered_error_message"
+                            app:layout_constraintStart_toStartOf="parent"
+                           app:layout_constraintTop_toTopOf="parent"
+                            android:textColor="@color/otp_status_text_color_wrong"/>
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:id="@+id/constraint_editetxt_pin2"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/dp_24"
+                        app:layout_constraintTop_toBottomOf="@+id/textErrorDescForWallet">
+
+                        <LinearLayout
+                            android:id="@+id/llForPinFirstTimeLogin"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/round_corner_back"
+                            android:orientation="vertical"
+                            android:paddingLeft="@dimen/dp_16"
+                            android:paddingTop="@dimen/dp_8"
+                            android:paddingBottom="@dimen/dp_8"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent">
+
+                            <TextView
+                                android:id="@+id/text_hint_pin2"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="@string/pin"
+                                android:textColor="@color/nfc_not_text_color_for_desc"
+                                android:textSize="@dimen/sp_16" />
+
+                            <EditText
+                                android:id="@+id/edit_input_pin1"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:background="@null"
+                                android:hint="@string/please_input_wallet_pin"
+                                android:inputType="numberPassword"
+                                android:maxLength="4"
+                                android:paddingTop="@dimen/dp_5"
+                                android:text=""
+                                android:textColorHint="@color/transaction_history_back_layout"
+                                android:textSize="@dimen/sp_16"
+                                tools:ignore="TouchTargetSizeCheck" />
+                        </LinearLayout>
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+                        <androidx.constraintlayout.widget.ConstraintLayout
+                            android:id="@+id/textErrorDescForEmail"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/dp_6"
+                            app:layout_constraintTop_toBottomOf="@+id/constraint_editetxt_pin2">
+                            <TextView
+                                android:id="@+id/textErrorOnEmail"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:textSize="@dimen/sp_13"
+                                android:text="@string/user_not_registered_error_message"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toTopOf="parent"
+                                android:textColor="@color/otp_status_text_color_wrong"/>
+                        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:id="@+id/constraint_proceed"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="70dp"
+                        app:layout_constraintTop_toBottomOf="@+id/constraint_editetxt_pin2">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent">
+
+                            <Button
+                                android:id="@+id/btn_proceed"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:background="@drawable/btn_bg_grey_signup_borderless"
+                                android:text="@string/proceed"
+                                android:textSize="@dimen/sp_14"
+                                android:textAllCaps="false"
+                                android:textColor="@color/white" />
+                        </LinearLayout>
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:id="@+id/constraint_term_of_use"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/dp_8"
+                        app:layout_constraintTop_toBottomOf="@+id/constraint_proceed">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent">
+
+                            <TextView
+                                android:id="@+id/textTermAndConditions"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="By proceeding, you are agreeing to our Terms of Use"
+                                android:textColor="@color/perform_transaction_color"
+                                android:textSize="@dimen/sp_12" />
+                            <!--<TextView
+                                android:id="@+id/text_termsOfUse"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="@string/term_of_use"
+                                android:textColor="@color/color_orange_new"
+                                android:textSize="@dimen/sp_14" />-->
+
+
+                        </LinearLayout>
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:id="@+id/constraint_or"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:layout_constraintTop_toBottomOf="@+id/constraint_term_of_use">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/dp_24"
+                            android:orientation="vertical"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent">
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:gravity="center"
+                                android:text="OR"
+                                android:textSize="14sp" />
+                        </LinearLayout>
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:id="@+id/constraint_login_with_email"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="1dp"
+                        app:layout_constraintTop_toBottomOf="@+id/constraint_or">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/dp_24"
+                            android:orientation="vertical"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent">
+
+                            <Button
+                                android:id="@+id/btn_change_email_walletID"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:background="@drawable/btn_bg_transparent"
+                                android:gravity="center"
+                                android:text="@string/login_with_walletId"
+                                android:textAllCaps="false"
+                                android:textColor="@color/black"
+                                android:textSize="14sp" />
+                        </LinearLayout>
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+                <!--Starting of second time login UI-->
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/constraint_second_login"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:padding="20dp"
+                    android:visibility="visible"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/constraint_firstLogin">
+
+                    <LinearLayout
+                        android:id="@+id/linear_SecondLoginText"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent">
+
+                        <TextView
+                            android:id="@+id/secondLoginText"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:text="Log In"
+                            android:textColor="@color/color_success"
+                            android:textSize="@dimen/dp_32"
+                            android:textStyle="bold"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent"
+                            tools:ignore="MissingConstraints"
+                            tools:layout_editor_absoluteY="0dp" />
+                    </LinearLayout>
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:id="@+id/second_constraint_proceed_text"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="16dp"
+                        app:layout_constraintTop_toBottomOf="@+id/linear_SecondLoginText">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="@string/login_with"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            android:textSize="@dimen/sp_14"
+                            android:textColor="@color/perform_transaction_color"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:id="@+id/second_constraint_editetxt_eamilAndWallet"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/dp_40"
+                        app:layout_constraintTop_toBottomOf="@+id/second_constraint_proceed_text">
+
+                        <LinearLayout
+                            android:id="@+id/emailWallet2ndLogin"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/round_corner_back"
+                            android:orientation="vertical"
+                            android:paddingLeft="16dp"
+                            android:paddingTop="8dp"
+                            android:paddingRight="@dimen/dp_16"
+                            android:paddingBottom="8dp"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal"
+                                android:weightSum="2">
+
+                                <TextView
+                                    android:id="@+id/text_hint_Second_WalletAndEmail"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:text="@string/email_address"
+                                    android:textColor="@color/nfc_not_text_color_for_desc"
+                                    android:textSize="@dimen/sp_16" />
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:orientation="vertical">
+
+                                    <LinearLayout
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:gravity="right"
+                                        android:orientation="vertical">
+                                        <androidx.constraintlayout.widget.ConstraintLayout
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content">
+
+                                        <TextView
+                                            android:id="@+id/text_useWalletEmailUnderline"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:gravity="right"
+                                            android:text="@string/use_wallet_id_underline"
+                                            app:layout_constraintTop_toTopOf="parent"
+                                            app:layout_constraintEnd_toEndOf="parent"
+                                            android:textColor="@color/perform_transaction_color"
+                                            android:textSize="@dimen/sp_16" />
+
+                                        <View
+                                            android:id="@+id/idView33"
+                                            android:layout_width="0dp"
+                                            android:layout_height="1dp"
+                                            app:layout_constraintTop_toBottomOf="@+id/text_useWalletEmailUnderline"
+                                            app:layout_constraintEnd_toEndOf="@+id/text_useWalletEmailUnderline"
+                                            app:layout_constraintStart_toStartOf="@+id/text_useWalletEmailUnderline"
+                                            android:background="#988F82" />
+                                        </androidx.constraintlayout.widget.ConstraintLayout>
+                                    </LinearLayout>
+
+
+                                </LinearLayout>
+
+                            </LinearLayout>
+
+
+                            <EditText
+                                android:id="@+id/edit_input_second__emailAndWallet"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:background="@null"
+                                android:hint="@string/please_input_email_address"
+                                android:inputType="textEmailAddress"
+                                android:paddingTop="@dimen/dp_5"
+                                android:textColorHint="@color/transaction_history_back_layout"
+                                android:textSize="@dimen/sp_16" />
+                        </LinearLayout>
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:id="@+id/constraint_editetxt_pin"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/dp_24"
+                        app:layout_constraintTop_toBottomOf="@+id/second_constraint_editetxt_eamilAndWallet">
+
+                        <LinearLayout
+                            android:id="@+id/pin2ndLogin"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/round_corner_back"
+                            android:orientation="vertical"
+                            android:paddingLeft="16dp"
+                            android:paddingTop="8dp"
+                            android:paddingBottom="8dp"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent">
+
+                            <TextView
+                                android:id="@+id/text_hint_pin"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="@string/pin"
+                                android:textColor="@color/nfc_not_text_color_for_desc"
+                                android:textSize="@dimen/sp_16" />
+
+                            <EditText
+                                android:id="@+id/edit_input_pin2"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:background="@null"
+                                android:hint="@string/please_input_wallet_pin"
+                                android:inputType="numberPassword"
+                                android:maxLength="4"
+                                android:paddingTop="@dimen/dp_5"
+                                android:textColorHint="@color/transaction_history_back_layout"
+                                android:textSize="@dimen/sp_16" />
+                        </LinearLayout>
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+                    <LinearLayout
+                        android:id="@+id/errorLayout2ndLogin"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:gravity="right"
+                        app:layout_constraintTop_toBottomOf="@+id/constraint_editetxt_pin">
+
+                        <androidx.constraintlayout.widget.ConstraintLayout
+                            android:id="@+id/textErrorDescForEmail2"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/dp_6"
+                            app:layout_constraintTop_toBottomOf="@+id/constraint_editetxt_pin2">
+                            <TextView
+                                android:id="@+id/textErrorOnEmail2"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:textSize="@dimen/sp_13"
+                                android:text="@string/user_not_registered_error_message"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toTopOf="parent"
+                                android:textColor="@color/otp_status_text_color_wrong"/>
+                        </androidx.constraintlayout.widget.ConstraintLayout>
+                    </LinearLayout>
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:id="@+id/constraint_proceed_second"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="1dp"
+                        app:layout_constraintTop_toBottomOf="@+id/errorLayout2ndLogin">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="30dp"
+                            android:orientation="vertical"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent">
+
+                            <Button
+                                android:id="@+id/btn_second_proceed"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:background="@drawable/btn_bg_grey_signup_borderless"
+                                android:gravity="center"
+                                android:text="@string/proceed"
+                                android:textAllCaps="false"
+                                android:textColor="@color/white"
+                                android:textSize="14sp" />
+                        </LinearLayout>
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:paddingTop="@dimen/dp_50"
+                        android:layout_marginBottom="@dimen/dp_10"
+                        app:layout_constraintTop_toBottomOf="@id/constraint_proceed_second">
+
+                        <androidx.appcompat.widget.AppCompatImageView
+                            android:id="@+id/img_biometric"
+                            android:layout_width="@dimen/dp_60"
+                            android:layout_height="@dimen/dp_60"
+                            android:background="@drawable/biometric_image" />
+                    </LinearLayout>
+
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </ScrollView>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

@@ -1,0 +1,907 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            android:background="@color/white"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/layoutOfHeader"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dp_40"
+                android:paddingStart="@dimen/dp_20"
+                android:orientation="horizontal"
+                android:visibility="visible"
+                android:paddingEnd="@dimen/dp_20"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toTopOf="@+id/screen_shot_view">
+                <LinearLayout
+                    android:id="@+id/backArrowAndText"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dp_40"
+                    android:weightSum="100"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent">
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:id="@+id/backArrowBtn"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="8"
+                        android:gravity="left|center"
+                        app:srcCompat="@drawable/ic_arrow_black" />
+
+                    <TextView
+                        android:id="@+id/textHeaderOfTxDetails"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_weight="92"
+                        android:gravity="left|center"
+                        android:paddingLeft="20dp"
+                        android:text="@string/payment_details"
+                        android:textColor="@color/color_success"
+                        android:textSize="@dimen/sp_20"
+                        android:textStyle="bold" />
+                </LinearLayout>
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/screen_shot_view"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingStart="@dimen/dp_20"
+                android:paddingEnd="@dimen/dp_20"
+                android:background="@color/white"
+                app:layout_constraintBottom_toTopOf="@+id/layoutOfButtons"
+                app:layout_constraintTop_toBottomOf="@+id/layoutOfHeader">
+
+                <LinearLayout
+                    android:id="@+id/logoIcon"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/dp_25"
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    android:visibility="visible"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent">
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:id="@+id/idSuccessPaymentImg"
+                        android:layout_width="@dimen/tap_tap_logo_width"
+                        android:layout_height="@dimen/tap_tap_logo_height"
+                        android:layout_marginTop="@dimen/dp_10"
+                        android:src="@drawable/tap_tap_logo" />
+
+
+                </LinearLayout>
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/imageForStatus"
+                    android:visibility="visible"
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/dp_70"
+                    android:layout_marginTop="@dimen/dp_60"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/logoIcon" />
+
+                <LinearLayout
+                    android:id="@+id/mainLinearForHistoryAndPayment"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/dp_60"
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    android:background="@color/white"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/imageForStatus">
+                    <!--View for show transaction history details amount and date-->
+                    <LinearLayout
+                        android:id="@+id/linearHistoryDetailAmount"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:orientation="vertical"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent">
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:id="@+id/textAmountTxHistory"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:text=""
+                            android:textColor="@color/color_success"
+                            android:textSize="@dimen/sp_20"
+                            android:textStyle="bold" />
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:id="@+id/textStatusTxHistory"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/dp_5"
+                            android:background="@drawable/tx_history_inner_design_light_green"
+                            android:gravity="center"
+                            android:paddingLeft="@dimen/dp_10"
+                            android:paddingRight="@dimen/dp_10"
+                            android:text="Completed"
+                            android:textColor="@color/green_2"
+                            android:textSize="@dimen/sp_12" />
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:id="@+id/textUserNameTxHistory"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/dp_8"
+                            android:gravity="center"
+                            android:text=""
+                            android:textColor="@color/view_more_text_color"
+                            android:textSize="@dimen/sp_14" />
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:id="@+id/textDateTxHistory"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/dp_8"
+                            android:gravity="center"
+                            android:text=""
+                            android:textColor="@color/gray_text"
+                            android:textSize="@dimen/sp_14" />
+                    </LinearLayout>
+
+                    <!--View for show transaction status amount and date-->
+                    <LinearLayout
+                        android:id="@+id/linearTransactionDetailAmount"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:orientation="vertical"
+                        android:visibility="visible"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent">
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:id="@+id/textStatusPaymentDetail"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:text="@string/payment_success"
+                            android:textColor="@color/color_success"
+                            android:textSize="@dimen/sp_20"
+                            android:textStyle="bold" />
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:id="@+id/textDateTimeOfPayment"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/dp_8"
+                            android:gravity="center"
+                            android:text=""
+                            android:textColor="@color/gray_text"
+                            android:textSize="@dimen/sp_14" />
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:id="@+id/textAmountPaidInPayment"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/dp_8"
+                            android:gravity="center"
+                            android:text=""
+                            android:textColor="#262729"
+                            android:textSize="@dimen/sp_16"
+                            android:textStyle="bold" />
+                    </LinearLayout>
+                </LinearLayout>
+                <!--View for Transaction all commons details-->
+                <LinearLayout
+                    android:id="@+id/id3ndLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/dp_25"
+                    android:orientation="vertical"
+                    android:background="@drawable/layout_border_v2"
+                    android:padding="@dimen/dp_10"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/mainLinearForHistoryAndPayment">
+
+                    <LinearLayout
+                        android:visibility="gone"
+                        tools:visibility = "visible"
+                        android:id="@+id/ll_transaction_id"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:weightSum="100">
+
+                            <TextView
+                                android:id="@+id/textTransactionID"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="40"
+                                android:layout_gravity="top"
+                                android:gravity="left|center"
+                                android:text="@string/transaction_id"
+                                android:textColor="@color/nfc_not_text_color_for_desc"
+                                android:textSize="@dimen/sp_14" />
+
+                            <TextView
+                                android:id="@+id/textTransactionIDValue"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="top"
+                                android:layout_weight="60"
+                                android:gravity="right|center"
+                                android:text=""
+                                android:textColor="@color/perform_transaction_color"
+                                android:textSize="@dimen/sp_16"
+                                android:textStyle="bold" />
+                        </LinearLayout>
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="1dp"
+                            android:layout_marginTop="@dimen/dp_2"
+                            android:background="@color/gray" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:visibility="gone"
+                        tools:visibility = "visible"
+                        android:id="@+id/ll_rrn"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/dp_10"
+                            android:orientation="horizontal"
+                            android:weightSum="100">
+
+                            <TextView
+                                android:id="@+id/textRRN"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="top"
+                                android:layout_weight="40"
+                                android:gravity="left|center"
+                                android:text="@string/rrn"
+                                android:textColor="@color/nfc_not_text_color_for_desc"
+                                android:textSize="@dimen/sp_14" />
+
+                            <LinearLayout
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="top"
+                                android:layout_weight="60"
+                                android:gravity="right"
+                                android:orientation="horizontal">
+
+                                <TextView
+                                    android:id="@+id/textRRNValue"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="match_parent"
+                                    android:gravity="right|center"
+                                    android:text=""
+                                    android:textColor="@color/perform_transaction_color"
+                                    android:textSize="@dimen/sp_16"
+                                    android:textStyle="bold" />
+                            </LinearLayout>
+                        </LinearLayout>
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="1dp"
+                            android:layout_marginTop="@dimen/dp_2"
+                            android:background="@color/gray" />
+                    </LinearLayout>
+                    <LinearLayout
+                        android:visibility="gone"
+                        tools:visibility = "visible"
+                        android:id="@+id/ll_card_number"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/dp_10"
+                            android:orientation="horizontal"
+                            android:weightSum="100">
+
+                            <TextView
+                                android:id="@+id/textCardNumber"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="top"
+                                android:layout_weight="30"
+                                android:gravity="left|center"
+                                android:text="@string/card_number"
+                                android:textColor="@color/nfc_not_text_color_for_desc"
+                                android:textSize="@dimen/sp_14" />
+
+                            <LinearLayout
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="70"
+                                android:layout_gravity="top"
+                                android:gravity="right"
+                                android:orientation="horizontal">
+
+                                <androidx.appcompat.widget.AppCompatImageView
+                                    android:id="@+id/idMasterCardImg"
+                                    android:scaleType="fitCenter"
+                                    android:layout_gravity="top"
+                                    android:layout_width="24dp"
+                                    android:layout_height="24dp"
+                                    android:layout_marginRight="@dimen/dp_3"
+                                    />
+
+                                <TextView
+                                    android:id="@+id/textCardNumberValue"
+                                    android:layout_gravity="top"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:gravity="right|center"
+                                    android:text=""
+                                    android:textColor="@color/perform_transaction_color"
+                                    android:textSize="@dimen/sp_16"
+                                    android:textStyle="bold" />
+                            </LinearLayout>
+                        </LinearLayout>
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="1dp"
+                            android:layout_marginTop="@dimen/dp_2"
+                            android:background="@color/gray" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:visibility="gone"
+                        tools:visibility = "visible"
+                        android:id="@+id/ll_stan"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/dp_10"
+                            android:orientation="horizontal"
+                            android:weightSum="100">
+
+                            <TextView
+                                android:id="@+id/textStan"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="40"
+                                android:layout_gravity="top"
+                                android:gravity="left|center"
+                                android:lineSpacingExtra="1sp"
+                                android:text="@string/stan"
+                                android:textColor="@color/nfc_not_text_color_for_desc"
+                                android:textSize="@dimen/sp_14"
+                                android:translationY="-0.28sp" />
+
+                            <TextView
+                                android:id="@+id/textStanValue"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="60"
+                                android:layout_gravity="top"
+                                android:gravity="right|center"
+                                android:lineSpacingExtra="1sp"
+                                android:text=""
+                                android:textColor="@color/perform_transaction_color"
+                                android:textSize="@dimen/sp_16"
+                                android:textStyle="bold"
+                                android:translationY="-0.32sp" />
+                        </LinearLayout>
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="1dp"
+                            android:layout_marginTop="@dimen/dp_2"
+                            android:background="@color/gray" />
+                    </LinearLayout>
+
+
+
+                    <LinearLayout
+                        android:visibility="gone"
+                        tools:visibility = "visible"
+                        android:id="@+id/ll_receiver_name"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/dp_10"
+                            android:orientation="horizontal"
+                            android:weightSum="100">
+
+                            <TextView
+                                android:id="@+id/textReceiverName"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="top"
+                                android:layout_weight="40"
+                                android:gravity="left|center"
+                                android:text="@string/receiver_name"
+                                android:textColor="@color/nfc_not_text_color_for_desc"
+                                android:textSize="@dimen/sp_14" />
+
+                            <TextView
+                                android:id="@+id/textReceiverNameValue"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="top"
+                                android:layout_weight="60"
+                                android:gravity="right|center"
+                                android:textColor="@color/perform_transaction_color"
+                                android:text=""
+                                android:textSize="@dimen/sp_16"
+                                android:textStyle="bold" />
+                        </LinearLayout>
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="1dp"
+                            android:layout_marginTop="@dimen/dp_4"
+                            android:background="@color/gray" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:visibility="gone"
+                        tools:visibility = "visible"
+                        android:id="@+id/ll_receiver_number"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/dp_10"
+                            android:orientation="horizontal"
+                            android:weightSum="100">
+
+                            <TextView
+                                android:id="@+id/textReceiverNumber"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="40"
+                                android:layout_gravity="top"
+                                android:gravity="left|center"
+                                android:text="@string/receiver_number"
+                                android:textColor="@color/nfc_not_text_color_for_desc"
+                                android:textSize="@dimen/sp_14" />
+
+                            <TextView
+                                android:id="@+id/textReceiverNumberValue"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="top"
+                                android:layout_weight="60"
+                                android:gravity="right|center"
+                                android:textColor="@color/perform_transaction_color"
+                                android:text=""
+                                android:textSize="@dimen/sp_16"
+                                android:textStyle="bold" />
+                        </LinearLayout>
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="1dp"
+                            android:layout_marginTop="@dimen/dp_2"
+                            android:background="@color/gray" />
+                    </LinearLayout>
+                    <LinearLayout
+                        android:visibility="gone"
+                        tools:visibility = "visible"
+                        android:id="@+id/ll_transaction_fee"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:layout_marginTop="@dimen/dp_10"
+                            android:weightSum="100">
+
+                            <TextView
+                                android:id="@+id/textTransactionFees"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="40"
+                                android:layout_gravity="top"
+                                android:gravity="left|center"
+                                android:text="@string/transaction_fee"
+                                android:textColor="@color/nfc_not_text_color_for_desc"
+                                android:textSize="@dimen/sp_14" />
+
+                            <TextView
+                                android:id="@+id/textTransactionFeesValue"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="top"
+                                android:layout_weight="60"
+                                android:gravity="right|center"
+                                android:text=""
+                                android:textColor="@color/perform_transaction_color"
+                                android:textSize="@dimen/sp_16"
+                                android:textStyle="bold" />
+                        </LinearLayout>
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="1dp"
+                            android:layout_marginTop="@dimen/dp_2"
+                            android:background="@color/gray" />
+                    </LinearLayout>
+                    <LinearLayout
+                        android:visibility="gone"
+                        tools:visibility = "visible"
+                        android:id="@+id/ll_sender_name"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/dp_10"
+                            android:orientation="horizontal"
+                            android:weightSum="100">
+
+                            <TextView
+                                android:id="@+id/textSenderName"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="40"
+                                android:layout_gravity="top"
+                                android:gravity="left|center"
+                                android:lineSpacingExtra="1sp"
+                                android:text="@string/sender_name"
+                                android:textColor="@color/nfc_not_text_color_for_desc"
+                                android:textSize="@dimen/sp_14" />
+
+                            <TextView
+                                android:id="@+id/textSenderNameValue"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="60"
+                                android:layout_gravity="top"
+                                android:gravity="right|center"
+                                android:text=""
+                                android:textColor="@color/perform_transaction_color"
+                                android:textSize="@dimen/sp_16"
+                                android:textStyle="bold" />
+                        </LinearLayout>
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="1dp"
+                            android:layout_marginTop="@dimen/dp_2"
+                            android:background="@color/gray" />
+                    </LinearLayout>
+                    <LinearLayout
+                        android:visibility="gone"
+                        tools:visibility = "visible"
+                        android:id="@+id/ll_sender_number"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/dp_10"
+                            android:orientation="horizontal"
+                            android:weightSum="100">
+
+                            <TextView
+                                android:id="@+id/textSenderNumber"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="top"
+                                android:layout_weight="40"
+                                android:gravity="left|center"
+                                android:lineSpacingExtra="1sp"
+                                android:text="@string/sender_number"
+                                android:textColor="@color/nfc_not_text_color_for_desc"
+                                android:textSize="@dimen/sp_14" />
+
+                            <TextView
+                                android:id="@+id/textSenderNumberValue"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="top"
+                                android:layout_weight="60"
+                                android:gravity="right|center"
+                                android:text=""
+                                android:textColor="@color/perform_transaction_color"
+                                android:textSize="@dimen/sp_16"
+                                android:textStyle="bold" />
+                        </LinearLayout>
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="1dp"
+                            android:layout_marginTop="@dimen/dp_2"
+                            android:background="@color/gray" />
+                    </LinearLayout>
+                    <LinearLayout
+                        android:visibility="gone"
+                        tools:visibility = "visible"
+                        android:id="@+id/ll_bank_name"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/dp_10"
+                            android:orientation="horizontal"
+                            android:weightSum="100">
+
+                            <TextView
+                                android:id="@+id/textBankName"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="top"
+                                android:layout_weight="40"
+                                android:gravity="left|center"
+                                android:lineSpacingExtra="1sp"
+                                android:text="@string/bak_name"
+                                android:textColor="@color/nfc_not_text_color_for_desc"
+                                android:textSize="@dimen/sp_14" />
+
+                            <TextView
+                                android:id="@+id/textBankNameValue"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="top"
+                                android:layout_weight="60"
+                                android:gravity="right|center"
+                                android:text=""
+                                android:textColor="@color/perform_transaction_color"
+                                android:textSize="@dimen/sp_16"
+                                android:textStyle="bold" />
+                        </LinearLayout>
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="1dp"
+                            android:layout_marginTop="@dimen/dp_2"
+                            android:background="@color/gray" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:visibility="gone"
+                        tools:visibility = "visible"
+                        android:id="@+id/ll_service_type"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/dp_10"
+                            android:orientation="horizontal"
+                            android:weightSum="100">
+
+                            <TextView
+                                android:id="@+id/textServiceType"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="top"
+                                android:layout_weight="40"
+                                android:gravity="left|center"
+                                android:lineSpacingExtra="1sp"
+                                android:text="@string/service_type"
+                                android:textColor="@color/nfc_not_text_color_for_desc"
+                                android:textSize="@dimen/sp_14" />
+
+                            <TextView
+                                android:id="@+id/textServiceTypeValue"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="top"
+                                android:layout_weight="60"
+                                android:gravity="right|center"
+                                android:text=""
+                                android:textColor="@color/perform_transaction_color"
+                                android:textSize="@dimen/sp_16"
+                                android:textStyle="bold" />
+                        </LinearLayout>
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="1dp"
+                            android:layout_marginTop="@dimen/dp_2"
+                            android:background="@color/gray" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:visibility="gone"
+                        tools:visibility = "visible"
+                        android:id="@+id/ll_remark"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/dp_10"
+                            android:orientation="horizontal"
+                            android:weightSum="2">
+
+                            <TextView
+                                android:id="@+id/textRemark"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:layout_gravity="top"
+                                android:gravity="left|center"
+                                android:lineSpacingExtra="1sp"
+                                android:text="@string/remark"
+                                android:textColor="@color/nfc_not_text_color_for_desc"
+                                android:textSize="@dimen/sp_14" />
+
+                            <TextView
+                                android:layout_gravity="top"
+                                android:id="@+id/textRemarkValue"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:gravity="right|center"
+                                android:textColor="@color/perform_transaction_color"
+                                android:textSize="@dimen/sp_16"
+                                android:textStyle="bold" />
+                        </LinearLayout>
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="1dp"
+                            android:layout_marginTop="@dimen/dp_2"
+                            android:background="@color/gray" />
+                    </LinearLayout>
+
+
+                </LinearLayout>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+            <!--View contain both buttons-->
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/layoutOfButtons"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingBottom="@dimen/dp_15"
+                android:paddingStart="@dimen/dp_20"
+                android:paddingEnd="@dimen/dp_20"
+                app:layout_constraintTop_toBottomOf="@+id/screen_shot_view">
+
+                <LinearLayout
+                    android:id="@+id/id4ndLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/dp_25"
+                    android:gravity="center"
+                    android:orientation="horizontal"
+                    android:paddingLeft="@dimen/dp_20"
+                    android:paddingRight="@dimen/dp_20"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent">
+
+                    <LinearLayout
+                        android:id="@+id/llDownload"
+                        android:visibility="gone"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="@dimen/dp_20"
+                        android:gravity="center"
+                        android:orientation="vertical">
+
+                        <androidx.appcompat.widget.AppCompatImageView
+                            android:id="@+id/idDownloadImg"
+                            android:layout_width="wrap_content"
+                            android:layout_height="40dp"
+                            android:src="@drawable/ic_download" />
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:id="@+id/idDownloadTxt"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:text="@string/download"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/sp_14" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/linearShare"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/dp_20"
+                        android:gravity="center"
+                        android:orientation="vertical">
+
+                        <androidx.appcompat.widget.AppCompatImageView
+                            android:id="@+id/idShareImg"
+                            android:layout_width="wrap_content"
+                            android:layout_height="40dp"
+                            android:src="@drawable/ic_share" />
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:id="@+id/idShareTxt"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:text="@string/share"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/sp_14" />
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/id5ndLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dp_55"
+                    android:layout_marginTop="@dimen/dp_30"
+                    android:background="@drawable/button_base"
+                    android:gravity="center"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/id4ndLayout">
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/proceedToDashTxt"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/dp_55"
+                        android:gravity="center"
+                        android:text="@string/proceed_to_dashboard"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/sp_14" />
+                </LinearLayout>
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </ScrollView>
+</layout>

@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.nownow.softpos">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.NFC" />
+    <uses-permission android:name="android.permission.POST_NOTIFICATIONS" />
+   <!-- <uses-permission android:name="android.permission.READ_PRIVILEGED_PHONE_STATE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />-->
+    <uses-permission android:name="android.permission.VIBRATE" />
+
+    <uses-feature
+        android:name="android.hardware.nfc"
+        android:required="false" />
+
+    <uses-permission android:name="android.permission.NEARBY_WIFI_DEVICES" />
+
+    <application
+        android:name=".application.TapNpayApplication"
+        android:allowBackup="true"
+        android:dataExtractionRules="@xml/data_extraction_rules"
+        android:fullBackupContent="@xml/backup_rules"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme"
+        tools:replace="android:fullBackupContent"
+        tools:targetApi="31">
+        <activity
+            android:name=".activities.PrivacyPolicyActivity"
+            android:exported="false">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <!--
+         <activity
+            android:name=".activities.TestingActivity"
+            android:exported="false">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        -->
+        <!--
+ <activity
+            android:name=".activities.TerminalLinkSuccessful"
+            android:exported="false">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        -->
+        <!--
+ <activity
+            android:name=".activities.CardDetectedDialog"
+            android:screenOrientation="portrait">
+        </activity>
+        -->
+        <activity
+            android:name=".activities.TransactionHistoryActivity"
+            android:exported="false"
+            android:screenOrientation="portrait">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
+            android:name=".activities.ChangeAndConfirmPinActivity"
+            android:exported="false"></activity>
+        <activity
+            android:name=".activities.AccountDetailsActivity"
+            android:screenOrientation="portrait" />
+
+
+        <activity
+            android:name=".activities.DashboardActivity"
+            android:exported="false"
+            android:screenOrientation="portrait"></activity>
+        <activity
+            android:name=".activities.SplashActivity"
+            android:exported="true"
+            android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".activities.BiometricSettingActivity"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.Transparent"
+            tools:ignore="Instantiatable" />
+        <activity
+            android:name=".activities.LoginActivity"
+            android:exported="true"
+            android:screenOrientation="portrait">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
+            android:name=".activities.OtpValidateActivity"
+            android:exported="false"
+            android:screenOrientation="portrait" />
+        <!--
+ <activity
+            android:name=".activities.LoginSuccessDialog"
+            android:exported="false"
+            android:theme="@style/Theme.Transparent"
+            tools:ignore="Instantiatable" />
+        -->
+        <activity
+            android:name=".activities.CardReadActivity"
+            android:exported="false"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activities.CardPINActivity"
+            android:exported="false"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activities.SuccessActivity"
+            android:exported="false"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activities.ResetPINActivity"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.Transparent"
+            tools:ignore="Instantiatable" />
+        <!--
+ <activity
+            android:name=".activities.ResetPinOtpActivity"
+            android:exported="false"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activities.PinSuccessDialog"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.Transparent"
+            tools:ignore="Instantiatable" />
+        -->
+        <activity
+            android:name=".activities.ProfileSettingsActivity"
+            android:exported="false"
+            android:screenOrientation="portrait" />
+
+        <provider
+            android:name="androidx.core.content.FileProvider"
+            android:authorities="${applicationId}.fileprovider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/file_paths" />
+        </provider>
+        <provider
+            android:name="androidx.core.content.FileProvider"
+            android:authorities="${applicationId}.fileprovider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/provider_paths" />
+        </provider>
+    </application>
+
+</manifest>

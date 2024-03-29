@@ -1,0 +1,249 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+<ScrollView
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <LinearLayout
+            android:id="@+id/logoImgLL"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_220"
+            android:gravity="center"
+            android:background="@drawable/ic_otp_bg"
+            app:layout_constraintBottom_toTopOf="@+id/backArrowImgLL"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/logoImgView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_logo" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/backArrowImgLL"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_40"
+            android:layout_marginTop="@dimen/dp_10"
+            android:orientation="horizontal"
+            android:paddingLeft="@dimen/dp_20"
+            android:paddingRight="@dimen/dp_20"
+            android:weightSum="100"
+            app:layout_constraintBottom_toTopOf="@+id/idPinCircleTextLL"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/logoImgLL">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/backArrowBtn"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="8"
+                android:gravity="left|center"
+                app:srcCompat="@drawable/ic_arrow_black" />
+
+            <TextView
+                android:id="@+id/tv_toolbar_dashboard"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_gravity="center_horizontal"
+                android:layout_weight="92"
+                android:gravity="left|center"
+                android:paddingLeft="20dp"
+                android:text="@string/reset_pin"
+                android:textColor="@color/color_success"
+                android:textSize="@dimen/sp_30"
+                android:textStyle="bold" />
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:id="@+id/idPinCircleTextLL"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp_20"
+            android:layout_weight="2"
+            android:gravity="bottom"
+            android:orientation="vertical"
+            android:paddingLeft="@dimen/dp_20"
+            android:paddingRight="@dimen/dp_20"
+            app:layout_constraintBottom_toTopOf="@+id/pin_view"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/backArrowImgLL">
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/text_please_type_otp_pin"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="left"
+                android:text="@string/please_type_pin_otp"
+                android:textColor="#495260"
+                android:textSize="@dimen/sp_16"
+                android:textStyle="normal" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/pin_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="@dimen/dp_50"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:paddingLeft="@dimen/dp_20"
+            android:paddingRight="@dimen/dp_20"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/idPinCircleTextLL">
+
+            <ImageView
+                android:id="@+id/imageview_circle1"
+                android:layout_width="@dimen/dp_50"
+                android:layout_height="@dimen/dp_50"
+                android:layout_marginEnd="2dp"
+                android:src="@drawable/pin_view_frame" />
+
+            <ImageView
+                android:id="@+id/imageview_circle2"
+                android:layout_width="@dimen/dp_50"
+                android:layout_height="@dimen/dp_50"
+                android:layout_marginEnd="2dp"
+                android:src="@drawable/pin_view_frame" />
+
+            <ImageView
+                android:id="@+id/imageview_circle3"
+                android:layout_width="@dimen/dp_50"
+                android:layout_height="@dimen/dp_50"
+                android:layout_marginEnd="2dp"
+                android:src="@drawable/pin_view_frame" />
+
+            <ImageView
+                android:id="@+id/imageview_circle4"
+                android:layout_width="@dimen/dp_50"
+                android:layout_height="@dimen/dp_50"
+                android:layout_marginEnd="2dp"
+                android:src="@drawable/pin_view_frame" />
+
+            <ImageView
+                android:id="@+id/imageview_circle5"
+                android:layout_width="@dimen/dp_50"
+                android:layout_height="@dimen/dp_50"
+                android:layout_marginEnd="2dp"
+                android:src="@drawable/pin_view_frame" />
+
+            <ImageView
+                android:id="@+id/imageview_circle6"
+                android:layout_width="@dimen/dp_50"
+                android:layout_height="@dimen/dp_50"
+                android:src="@drawable/pin_view_frame" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/otpValidateTxt"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginLeft="@dimen/dp_30"
+            android:layout_marginTop="@dimen/dp_10"
+            android:layout_marginRight="@dimen/dp_30"
+            android:background="#F1FFEF"
+            android:gravity="center"
+            android:text="@string/otp_valid"
+            android:textColor="#106802"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/pin_view" />
+
+        <LinearLayout
+            android:id="@+id/cancelPaymentLLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp_20"
+            android:orientation="horizontal"
+            android:paddingLeft="@dimen/dp_20"
+            android:paddingRight="@dimen/dp_20"
+            android:weightSum="100"
+            app:layout_constraintBottom_toTopOf="@+id/id6ndLayout"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/otpValidateTxt">
+
+            <TextView
+                android:id="@+id/secondRemainingTxt"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="50"
+                android:gravity="left"
+                android:text="@string/second_remaining"
+                android:textColor="#E9A237"
+                android:textSize="14sp" />
+
+            <TextView
+                android:id="@+id/notGetOtpTxt"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="50"
+                android:gravity="right"
+                android:text="@string/did_not_get_otp"
+                android:textColor="#123D93"
+                android:textSize="14sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/loginWithEmailLLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp_80"
+            android:orientation="horizontal"
+            android:weightSum="100"
+            app:layout_constraintBottom_toTopOf="@+id/id6ndLayout"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/cancelPaymentLLayout">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="50"
+                android:gravity="right"
+                android:text="Login with "
+                android:textColor="@color/black"
+                android:textSize="14sp" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="50"
+                android:gravity="left"
+                android:text="@string/email_address_cap_E"
+                android:textColor="#E9A237"
+                android:textSize="14sp" />
+        </LinearLayout>
+
+        <View
+            android:id="@+id/id6ndLayout"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_marginTop="@dimen/dp_50"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/cancelPaymentLLayout" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>
+    </layout>

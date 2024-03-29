@@ -1,0 +1,277 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:padding="@dimen/dp_30">
+
+            <LinearLayout
+                android:id="@+id/backArrowImgLL"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp_40"
+                android:layout_marginTop="@dimen/dp_40"
+                android:orientation="horizontal"
+                android:weightSum="100"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/backArrowBtn"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="8"
+                    android:gravity="left|center"
+                    app:srcCompat="@drawable/ic_arrow_black" />
+
+                <TextView
+                    android:id="@+id/tv_toolbar_dashboard"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_weight="92"
+                    android:gravity="left|center"
+                    android:paddingLeft="20dp"
+                    android:text="Account Details"
+                    android:textColor="@color/color_success"
+                    android:textSize="@dimen/sp_20"
+                    android:textStyle="bold" />
+            </LinearLayout>
+
+
+            <View
+                android:id="@+id/idView1"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginTop="@dimen/dp_40"
+                android:background="@color/nfc_not_text_color_for_desc"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/backArrowImgLL" />
+
+
+            <LinearLayout
+                android:id="@+id/ll_amount"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dp_5"
+                android:orientation="vertical"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/idView1">
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/txt_payable_amount"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="@string/payable_amount"
+                    android:textColor="@color/nfc_not_text_color_for_desc"
+                    android:textSize="@dimen/sp_14"
+                    android:textStyle="normal" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/txtAmount"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text=""
+                    android:textColor="@color/colorPrimary"
+                    android:textSize="@dimen/sp_16"
+                    android:textStyle="bold" />
+
+            </LinearLayout>
+
+            <View
+                android:id="@+id/idView2"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginTop="@dimen/dp_5"
+                android:background="@color/nfc_not_text_color_for_desc"
+
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/ll_amount" />
+
+
+          <LinearLayout
+              android:id="@+id/ll_ac_info"
+              app:layout_constraintBottom_toTopOf="@+id/btn_check_tran"
+              android:layout_marginTop="@dimen/dp_30"
+              android:layout_marginBottom="@dimen/dp_60"
+              android:orientation="vertical"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              app:layout_constraintTop_toBottomOf="@+id/idView2">
+
+
+              <androidx.appcompat.widget.AppCompatTextView
+                  android:id="@+id/infoText"
+                  android:text="@string/pay_with_transfer_info"
+                  android:layout_width="wrap_content"
+                  android:textColor="#495260"
+                  android:textSize="@dimen/sp_14"
+                  android:fontFamily="@font/calibri_regular"
+                  android:layout_height="wrap_content">
+              </androidx.appcompat.widget.AppCompatTextView>
+
+
+              <LinearLayout
+                  android:id="@+id/ll_wid"
+                  android:layout_width="match_parent"
+                  android:layout_height="wrap_content"
+                  android:background="@drawable/round_corner_back"
+                  android:orientation="vertical"
+                  android:layout_marginTop="@dimen/dp_30"
+                  android:paddingLeft="16dp"
+                  android:paddingTop="@dimen/dp_8"
+                  android:paddingBottom="@dimen/dp_8"
+                  app:layout_constraintEnd_toEndOf="parent"
+                  app:layout_constraintStart_toStartOf="parent"
+                  app:layout_constraintTop_toTopOf="parent">
+
+                  <TextView
+                      android:id="@+id/text_hint_wid"
+                      android:layout_width="match_parent"
+                      android:layout_height="wrap_content"
+                      android:text="@string/wallet_identification"
+                      android:textColor="@color/nfc_not_text_color_for_desc"
+                      android:textSize="@dimen/sp_16" />
+
+                  <EditText
+                      android:id="@+id/edit_wid"
+                      android:layout_width="match_parent"
+                      android:layout_height="wrap_content"
+                      android:background="@null"
+                      android:paddingTop="@dimen/dp_5"
+                      android:text=""
+                      android:enabled="false"
+                      android:textColorHint="@color/transaction_history_back_layout"
+                      android:textSize="@dimen/sp_16"
+                      android:textColor="@color/colorPrimary"
+                      tools:ignore="TouchTargetSizeCheck" />
+              </LinearLayout>
+              <LinearLayout
+                  android:id="@+id/ll_bank"
+                  android:layout_width="match_parent"
+                  android:layout_height="wrap_content"
+                  android:background="@drawable/round_corner_back"
+                  android:orientation="vertical"
+                  android:layout_marginTop="@dimen/dp_20"
+                  android:paddingLeft="16dp"
+                  android:paddingTop="@dimen/dp_8"
+                  android:paddingBottom="@dimen/dp_8"
+                  app:layout_constraintEnd_toEndOf="parent"
+                  app:layout_constraintStart_toStartOf="parent"
+                  app:layout_constraintTop_toTopOf="parent">
+
+                  <TextView
+                      android:id="@+id/text_hint_bank"
+                      android:layout_width="match_parent"
+                      android:layout_height="wrap_content"
+                      android:text="@string/bank"
+                      android:textColor="@color/nfc_not_text_color_for_desc"
+                      android:textSize="@dimen/sp_16" />
+
+                  <LinearLayout
+                      android:weightSum="5"
+                      android:orientation="horizontal"
+                      android:gravity="center"
+                      android:layout_width="match_parent"
+                      android:layout_height="wrap_content">
+
+                      <androidx.appcompat.widget.AppCompatImageView
+                          android:layout_weight="1"
+                          android:src="@drawable/bank_now_now"
+                          android:layout_width="0dp"
+                          android:layout_gravity="center"
+                          android:layout_height="wrap_content"/>
+
+
+
+                      <EditText
+                          android:layout_weight="4"
+                          android:id="@+id/edit_input_bank_name"
+                          android:layout_width="0dp"
+                          android:layout_gravity="center"
+                          android:layout_height="wrap_content"
+                          android:background="@null"
+                          android:layout_marginLeft="@dimen/dp_10"
+                          android:hint=""
+                          android:enabled="false"
+                          android:text="NowNow Digital Systems Ltd"
+                          android:textColorHint="@color/transaction_history_back_layout"
+                          android:textSize="@dimen/sp_16"
+                          android:textColor="@color/colorNfcText"
+                          tools:ignore="TouchTargetSizeCheck" />
+                  </LinearLayout>
+
+              </LinearLayout>
+              <LinearLayout
+                  android:id="@+id/ll_merchant_name"
+                  android:layout_width="match_parent"
+                  android:layout_height="wrap_content"
+                  android:background="@drawable/round_corner_back"
+                  android:orientation="vertical"
+                  android:paddingLeft="16dp"
+                  android:layout_marginTop="@dimen/dp_20"
+                  android:paddingTop="@dimen/dp_8"
+                  android:paddingBottom="@dimen/dp_8"
+                  app:layout_constraintEnd_toEndOf="parent"
+                  app:layout_constraintStart_toStartOf="parent"
+                  app:layout_constraintTop_toTopOf="parent">
+
+                  <TextView
+                      android:id="@+id/text_hint_merchant_name"
+                      android:layout_width="match_parent"
+                      android:layout_height="wrap_content"
+                      android:text="@string/merchant_name"
+                      android:textColor="@color/nfc_not_text_color_for_desc"
+                      android:textSize="@dimen/sp_16" />
+
+                  <EditText
+                      android:id="@+id/edit_merchant_name"
+                      android:layout_width="match_parent"
+                      android:layout_height="wrap_content"
+                      android:background="@null"
+                      android:hint=""
+                      android:inputType="textEmailAddress"
+                      android:paddingTop="@dimen/dp_5"
+                      android:text=""
+                      android:enabled="false"
+                      android:textColorHint="@color/transaction_history_back_layout"
+                      android:textSize="@dimen/sp_16"
+                      android:textColor="@color/colorPrimary"
+                      tools:ignore="TouchTargetSizeCheck" />
+
+
+
+              </LinearLayout>
+
+
+          </LinearLayout>
+
+            <Button
+                android:id="@+id/btn_check_tran"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/btn_bg_grey_signup_borderless"
+                android:text="@string/check_transaction"
+                android:textSize="@dimen/sp_14"
+                android:textAllCaps="false"
+                android:textColor="@color/white"
+                app:layout_constraintBottom_toBottomOf="parent"
+                />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </ScrollView>
+</layout>

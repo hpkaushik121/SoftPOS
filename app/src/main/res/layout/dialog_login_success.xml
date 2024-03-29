@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#95000000">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingLeft="16dp"
+            android:paddingTop="32dp"
+            android:layout_marginTop="20dp"
+            android:paddingRight="16dp"
+            android:background="@drawable/rounded_corner_top"
+            app:layout_constraintBottom_toBottomOf="parent"
+            >
+
+            <ScrollView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_horizontal"
+                    android:orientation="vertical"
+                    android:paddingLeft="@dimen/dp_30"
+                    android:paddingRight="@dimen/dp_30">
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:id="@+id/idRightImg"
+                        android:layout_width="@dimen/dp_120"
+                        android:layout_height="@dimen/dp_100"
+                        android:src="@drawable/ic_success" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/sp_65"
+                        android:gravity="center"
+                        android:text="@string/login_success"
+                        android:textColor="@color/color_success"
+                        android:textSize="@dimen/sp_20"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/heading"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/dp_48"
+                        android:fontFamily="@font/montserrat"
+                        android:gravity="center_horizontal"
+                        android:text="@string/biometric_login_inactive"
+                        android:textColor="@color/color_orange_new"
+                        android:textSize="@dimen/sp_18"
+                        android:textStyle="bold" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/proceedToDashTxt"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/dp_55"
+                        android:layout_marginTop="@dimen/dp_48"
+                        android:layout_marginBottom="@dimen/dp_32"
+                        android:background="@drawable/button_base"
+                        android:gravity="center"
+                        android:text="@string/proceed_to_dashboard"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/sp_14" />
+                </LinearLayout>
+            </ScrollView>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

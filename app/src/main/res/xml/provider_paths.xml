@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<paths>
+
+    <external-path
+        path="Android/data//download/com.nownow.softpos"
+        name="files_root" />
+    <external-path
+        path="."
+        name="external_storage_root" />
+    <files-path
+        name="files"
+        path="." />
+    <external-path name="external_files" path="."/>
+</paths>

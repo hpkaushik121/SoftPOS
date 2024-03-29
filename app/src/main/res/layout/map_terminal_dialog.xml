@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#95000000">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/rounded_corner_top"
+            android:paddingStart="@dimen/dp_16"
+            android:paddingTop="@dimen/dp_32"
+            android:paddingEnd="@dimen/dp_16"
+            app:layout_constraintBottom_toBottomOf="parent">
+
+
+            <ScrollView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:gravity="center_horizontal"
+                    android:paddingBottom="@dimen/dp_20">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:gravity="right"
+                        android:paddingStart="10dp"
+                        android:weightSum="100">
+
+                        <androidx.appcompat.widget.AppCompatImageView
+                            android:id="@+id/closeLinkWalletDialog"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="10"
+                            android:layout_gravity="top|right"
+                            app:srcCompat="@drawable/closecrossbutton" />
+                    </LinearLayout>
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:layout_margin="@dimen/dp_50"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <androidx.appcompat.widget.AppCompatImageView
+                            android:layout_width="@dimen/dp_100"
+                            android:layout_height="wrap_content"
+                            android:src="@drawable/link"
+                            app:layout_constraintTop_toTopOf="parent"
+                            app:layout_constraintLeft_toLeftOf="parent"
+                            app:layout_constraintRight_toRightOf="parent"/>
+
+                        <ProgressBar
+                            android:id="@+id/progressBar"
+                            android:layout_width="@dimen/dp_100"
+                            android:layout_height="wrap_content"
+                            android:layout_centerInParent="true"
+                            app:layout_constraintTop_toTopOf="parent"
+                            app:layout_constraintLeft_toLeftOf="parent"
+                            app:layout_constraintRight_toRightOf="parent"/>
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="left|center"
+                        android:text="@string/text_link_your_wallet"
+                        android:textColor="@color/color_success"
+                        android:textSize="@dimen/sp_20"
+                        android:textStyle="bold" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="64dp"
+                        android:layout_marginTop="@dimen/dp_32"
+                        android:background="@drawable/round_corner_back"
+                        android:orientation="vertical"
+                        android:paddingLeft="@dimen/dp_16"
+                        android:paddingTop="4dp">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="@string/wallet_id"
+                            android:textColor="@color/nfc_not_text_color_for_desc"
+                            android:textSize="@dimen/sp_14" />
+
+                        <EditText
+                            android:id="@+id/edittextInputAmount"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@null"
+                            android:hint=""
+                            android:imeOptions="actionDone"
+                            android:inputType="number"
+                            android:maxLines="1"
+                            android:textSize="@dimen/sp_16" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/ll_accepted_card_log"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/dp_48"
+                        android:layout_marginBottom="@dimen/dp_48"
+                        android:orientation="horizontal">
+
+                        <androidx.appcompat.widget.AppCompatButton
+                            android:id="@+id/btnSubmit"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_gravity="center"
+                            android:background="@drawable/button_base"
+                            android:gravity="center"
+                            android:text="@string/submit"
+                            android:textAllCaps="false"
+                            android:textColor="@color/white" />
+                    </LinearLayout>
+                </LinearLayout>
+            </ScrollView>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

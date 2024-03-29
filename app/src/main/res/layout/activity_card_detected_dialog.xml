@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#95000000"
+        android:orientation="vertical">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingLeft="16dp"
+            android:paddingTop="32dp"
+            android:layout_marginTop="20dp"
+            android:paddingRight="16dp"
+            android:background="@drawable/rounded_corner_top"
+            app:layout_constraintBottom_toBottomOf="parent">
+
+                <ScrollView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_horizontal"
+                        android:orientation="vertical"
+                        android:paddingLeft="@dimen/dp_30"
+                        android:paddingRight="@dimen/dp_30">
+
+                        <androidx.appcompat.widget.AppCompatImageView
+                            android:id="@+id/logoImgView"
+                            android:layout_width="@dimen/tap_tap_logo_width"
+                            android:layout_height="@dimen/tap_tap_logo_height"
+                            android:layout_marginTop="@dimen/dp_40"
+                            android:src="@drawable/tap_tap_logo" />
+
+                        <androidx.appcompat.widget.AppCompatImageView
+                            android:id="@+id/idRightImg"
+                            android:layout_width="@dimen/dp_120"
+                            android:layout_height="@dimen/dp_100"
+                            android:layout_marginTop="@dimen/dp_50"
+                            android:src="@drawable/ic_success" />
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:id="@+id/text_cardDetected"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/dp_70"
+                            android:gravity="center"
+                            android:text="@string/card_detected"
+                            android:textColor="@color/card_detected_text_color"
+                            android:textSize="@dimen/sp_20"
+                            android:textStyle="bold" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/dp_24"
+                            android:gravity="center"
+                            android:layout_marginBottom="@dimen/dp_10"
+                            android:orientation="horizontal">
+
+                            <ImageView
+                                android:id="@+id/img_card_icon"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:src="@drawable/ic_mastercard" />
+
+                            <TextView
+                                android:id="@+id/cardTypeText"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="@dimen/dp_16"
+                                android:text="@string/master_card"
+                                android:textColor="@color/nfc_not_text_color_for_desc"
+                                android:textSize="@dimen/sp_16" />
+                        </LinearLayout>
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:id="@+id/txt_pin_instruction"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:text="@string/pin_instruction"
+                            android:textColor="@color/color_success"
+                            android:fontFamily="@font/inter_bold"
+                            android:layout_marginBottom="@dimen/dp_80"
+                            android:textSize="@dimen/sp_18"
+                            />
+
+                    </LinearLayout>
+                </ScrollView>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>
