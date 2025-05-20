@@ -11,7 +11,7 @@ android {
     compileSdk 33
 
     defaultConfig {
-        applicationId "com.nownow.softpos"
+        applicationId "com.aicortex.softpos"
 
         minSdk 21
         targetSdk 33
@@ -34,13 +34,7 @@ android {
             keyAlias "androiddebug"
             keyPassword "android"
         }
-        release {
-            //storeFile rootProject.file('debug.keystore.jks')
-            storeFile file('release.jks')
-            storePassword "t@p#2023"
-            keyAlias "nownow"
-            keyPassword "t@p#2023"
-        }
+       
     }
 
 
@@ -52,18 +46,11 @@ android {
             shrinkResources false
             minifyEnabled false
             signingConfig signingConfigs.debug
-            resValue "string", "app_name", "Tap Tap by Nownow debug"
+            resValue "string", "app_name", "Tap Tap by AiCortex debug"
             applicationIdSuffix ".debug"
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
 
-            buildConfigField 'String', 'MPOS_SERVER_URL', '"https://pg.nownowpay.com.ng"'
-            buildConfigField 'String', 'CORE_SERVER_URL', '"https://apidev.nownowpay.com.ng"'
-
-            buildConfigField 'boolean', 'LOG_ENABLED', 'true'
-            buildConfigField 'boolean', 'DEVELOPMENT', 'true'
-            buildConfigField 'boolean', 'USE_QA_URLS', 'false'
-            buildConfigField 'boolean', 'USE_STAGING_URLS', 'false'
-            buildConfigField 'boolean', 'USE_PRODUCTION_URLS', 'false'
+        
 
         }
         qa.initWith(buildTypes.debug)
@@ -72,18 +59,11 @@ android {
             shrinkResources false
             minifyEnabled false
             signingConfig signingConfigs.debug
-            resValue "string", "app_name", "Tap Tap by Nownow qa"
+            resValue "string", "app_name", "Tap Tap by AiCortex qa"
             applicationIdSuffix ".qa"
 
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
 
-            buildConfigField 'String', 'MPOS_SERVER_URL', '"https://qaapi.nownowpay.com.ng"'
-            buildConfigField 'String', 'CORE_SERVER_URL', '"https://qaapi.nownowpay.com.ng"'
-            buildConfigField 'boolean', 'LOG_ENABLED', 'true'
-            buildConfigField 'boolean', 'DEVELOPMENT', 'false'
-            buildConfigField 'boolean', 'USE_QA_URLS', 'true'
-            buildConfigField 'boolean', 'USE_STAGING_URLS', 'false'
-            buildConfigField 'boolean', 'USE_PRODUCTION_URLS', 'false'
         }
         staging.initWith(buildTypes.debug)
         staging {
@@ -91,57 +71,33 @@ android {
             shrinkResources false
             minifyEnabled false
             signingConfig signingConfigs.debug
-            resValue "string", "app_name", "Tap Tap by Nownow stag"
+            resValue "string", "app_name", "Tap Tap by AiCortex stag"
             applicationIdSuffix ".stage"
 
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
 
-
-            buildConfigField 'String', 'MPOS_SERVER_URL', '"https://stageapi.nownowpay.ng"'
-            buildConfigField 'String', 'CORE_SERVER_URL', '"https://stageapi.nownowpay.ng"'
-            buildConfigField 'boolean', 'LOG_ENABLED', 'false'
-            buildConfigField 'boolean', 'DEVELOPMENT', 'false'
-            buildConfigField 'boolean', 'USE_QA_URLS', 'false'
-            buildConfigField 'boolean', 'USE_STAGING_URLS', 'true'
-            buildConfigField 'boolean', 'USE_PRODUCTION_URLS', 'false'
         }
         production {
             debuggable true
             shrinkResources false
             minifyEnabled false
             signingConfig signingConfigs.debug
-            resValue "string", "app_name", "Tap Tap by Nownow prod"
+            resValue "string", "app_name", "Tap Tap by AiCortex prod"
             applicationIdSuffix ".prod"
 
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
-
-            buildConfigField 'String', 'MPOS_SERVER_URL', '"https://pg.nownowpay.ng"'
-            buildConfigField 'String', 'CORE_SERVER_URL', '"https://api.nownowpay.ng"'
-            buildConfigField 'boolean', 'LOG_ENABLED', 'false'
-            buildConfigField 'boolean', 'DEVELOPMENT', 'false'
-            buildConfigField 'boolean', 'USE_QA_URLS', 'false'
-            buildConfigField 'boolean', 'USE_STAGING_URLS', 'false'
-            buildConfigField 'boolean', 'USE_PRODUCTION_URLS', 'true'
         }
         release {
             debuggable false
             shrinkResources true
             minifyEnabled true
             signingConfig signingConfigs.release
-            resValue "string", "app_name", "Tap Tap by Nownow"
+            resValue "string", "app_name", "Tap Tap by AiCortex"
             //applicationIdSuffix ".prod"
 
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
 
-            //buildConfigField 'String', 'MPOS_SERVER_URL', '"https://pg.nownowpay.ng"'
-            buildConfigField 'String', 'MPOS_SERVER_URL', '"https://pg.nownowpay.ng"'
-            buildConfigField 'String', 'CORE_SERVER_URL', '"https://api.nownowpay.ng"'
 
-            buildConfigField 'boolean', 'LOG_ENABLED', 'false'
-            buildConfigField 'boolean', 'DEVELOPMENT', 'false'
-            buildConfigField 'boolean', 'USE_QA_URLS', 'false'
-            buildConfigField 'boolean', 'USE_STAGING_URLS', 'false'
-            buildConfigField 'boolean', 'USE_PRODUCTION_URLS', 'true'
 
         }
     }
