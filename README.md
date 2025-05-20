@@ -36,7 +36,6 @@ SoftPOS implements industry-leading security measures to ensure that all transac
 
 SoftPOS is built using modern technologies:
 
-- **React Native**: Cross-platform mobile application development
 - **NFC Host Card Emulation (HCE)**: For seamless contactless interaction
 - **RESTful API Integration**: Connect with payment processors and acquirers
 - **Real-time Database**: For instant transaction updates and synchronization
