@@ -1,4 +1,4 @@
-package com.nownow.softpos.utils
+package com.aicortex.softpos.utils
 
 class SharedPrefUtils : ParentSharedPrefObj() {
 
@@ -41,7 +41,7 @@ class SharedPrefUtils : ParentSharedPrefObj() {
                 const val PLAIN_TMK = "2FA25E9D6E76BF024F13B09EE0FEB085"
                 const val MERCHANT_ID_NFC = "2058LA021437700"
                 const val MERCHANT_CODE_NFC = "6012"
-                const val MERCHANT_NAME_NFC = "NOWNOW DIGITAL SYSTEMS LA           LANG"
+                const val MERCHANT_NAME_NFC = "aicortex DIGITAL SYSTEMS LA           LANG"
 
             }
         }

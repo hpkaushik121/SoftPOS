@@ -1,4 +1,4 @@
-package com.nownow.softpos.creditCardNfcReader;
+package com.aicortex.softpos.creditCardNfcReader;
 
 import android.content.Intent;
 import android.nfc.NfcAdapter;
@@ -7,12 +7,12 @@ import android.nfc.tech.IsoDep;
 import android.os.AsyncTask;
 import android.util.Log;
 
-import com.nownow.softpos.creditCardNfcReader.enums.EmvCardScheme;
-import com.nownow.softpos.creditCardNfcReader.model.EmvCard;
-import com.nownow.softpos.creditCardNfcReader.parser.EmvParser;
-import com.nownow.softpos.creditCardNfcReader.parser.IProvider;
-import com.nownow.softpos.creditCardNfcReader.utils.AESEncrypt;
-import com.nownow.softpos.creditCardNfcReader.utils.Provider;
+import com.aicortex.softpos.creditCardNfcReader.enums.EmvCardScheme;
+import com.aicortex.softpos.creditCardNfcReader.model.EmvCard;
+import com.aicortex.softpos.creditCardNfcReader.parser.EmvParser;
+import com.aicortex.softpos.creditCardNfcReader.parser.IProvider;
+import com.aicortex.softpos.creditCardNfcReader.utils.AESEncrypt;
+import com.aicortex.softpos.creditCardNfcReader.utils.Provider;
 
 import org.apache.commons.io.IOUtils;
 import org.apache.commons.lang3.StringUtils;

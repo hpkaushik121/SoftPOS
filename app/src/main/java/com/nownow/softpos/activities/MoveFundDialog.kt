@@ -1,4 +1,4 @@
-package com.nownow.softpos.activities
+package com.aicortex.softpos.activities
 
 import android.content.Intent
 import android.os.Bundle
@@ -10,9 +10,9 @@ import android.view.View.OnClickListener
 import android.view.ViewGroup
 import androidx.core.content.ContextCompat
 import com.google.android.material.bottomsheet.BottomSheetDialogFragment
-import com.nownow.softpos.R
-import com.nownow.softpos.databinding.DialogMoveFundBinding
-import com.nownow.softpos.utils.*
+import com.aicortex.softpos.R
+import com.aicortex.softpos.databinding.DialogMoveFundBinding
+import com.aicortex.softpos.utils.*
 import java.text.NumberFormat
 import java.util.*
 

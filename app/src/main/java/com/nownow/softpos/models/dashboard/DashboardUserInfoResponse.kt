@@ -1,6 +1,6 @@
-package com.nownow.softpos.models.dashboard
+package com.aicortex.softpos.models.dashboard
 
-import com.nownow.softpos.models.core.response.MfsResponseInfo
+import com.aicortex.softpos.models.core.response.MfsResponseInfo
 
 data class DashboardUserInfoResponse(
     val mfsResponseInfo: MfsResponseInfo

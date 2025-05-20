@@ -1,14 +1,14 @@
-package com.nownow.softpos.activities
+package com.aicortex.softpos.activities
 
 import android.content.Intent
 import android.os.Bundle
 import android.util.Log
 import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
-import com.nownow.softpos.R
-import com.nownow.softpos.utils.Constants
-import com.nownow.softpos.utils.DialogUtils
-import com.nownow.softpos.utils.Logger
+import com.aicortex.softpos.R
+import com.aicortex.softpos.utils.Constants
+import com.aicortex.softpos.utils.DialogUtils
+import com.aicortex.softpos.utils.Logger
 
 open class BaseActivity : AppCompatActivity() {
 

@@ -1,4 +1,4 @@
-package com.nownow.softpos.activities
+package com.aicortex.softpos.activities
 
 import android.content.Context
 import android.content.DialogInterface
@@ -13,11 +13,11 @@ import android.view.animation.AlphaAnimation
 import android.view.animation.Animation
 import androidx.core.content.ContextCompat
 import com.google.android.material.bottomsheet.BottomSheetDialogFragment
-import com.nownow.softpos.R
-import com.nownow.softpos.api.CheckDialogEventInterface
-import com.nownow.softpos.databinding.ActivityBiometricSettingBinding
-import com.nownow.softpos.helper.BiometricHelper
-import com.nownow.softpos.utils.*
+import com.aicortex.softpos.R
+import com.aicortex.softpos.api.CheckDialogEventInterface
+import com.aicortex.softpos.databinding.ActivityBiometricSettingBinding
+import com.aicortex.softpos.helper.BiometricHelper
+import com.aicortex.softpos.utils.*
 
 
 class BiometricSettingActivity(param: CheckDialogEventInterface) : BottomSheetDialogFragment(),

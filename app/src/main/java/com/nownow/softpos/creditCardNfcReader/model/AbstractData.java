@@ -1,4 +1,4 @@
-package com.nownow.softpos.creditCardNfcReader.model;
+package com.aicortex.softpos.creditCardNfcReader.model;
 
 import org.apache.commons.lang3.builder.ToStringBuilder;
 

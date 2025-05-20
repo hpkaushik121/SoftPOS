@@ -1,4 +1,4 @@
-package com.nownow.softpos.activities
+package com.aicortex.softpos.activities
 
 import android.content.Context
 import android.content.DialogInterface
@@ -9,12 +9,12 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import com.google.android.material.bottomsheet.BottomSheetDialogFragment
-import com.nownow.softpos.R
-import com.nownow.softpos.api.CheckDialogEventInterface
-import com.nownow.softpos.databinding.ActivityCardReadBinding
-import com.nownow.softpos.databinding.DialogLoginSuccessBinding
-import com.nownow.softpos.utils.Constants
-import com.nownow.softpos.utils.SharedPrefUtils
+import com.aicortex.softpos.R
+import com.aicortex.softpos.api.CheckDialogEventInterface
+import com.aicortex.softpos.databinding.ActivityCardReadBinding
+import com.aicortex.softpos.databinding.DialogLoginSuccessBinding
+import com.aicortex.softpos.utils.Constants
+import com.aicortex.softpos.utils.SharedPrefUtils
 
 class LoginSuccessDialog(param: CheckDialogEventInterface) : BottomSheetDialogFragment() {
     private lateinit var checkDialogEventInterface: CheckDialogEventInterface

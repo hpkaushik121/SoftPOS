@@ -1,4 +1,4 @@
-package com.nownow.softpos.creditCardNfcReader.model.enums;
+package com.aicortex.softpos.creditCardNfcReader.model.enums;
 
 /**
  * The currencies (ISO 4217). Reference: <a href="http://en.wikipedia.org/wiki/ISO_4217">Wikipedia ISO 4217</a>.

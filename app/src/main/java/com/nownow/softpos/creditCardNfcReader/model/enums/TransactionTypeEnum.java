@@ -1,4 +1,4 @@
-package com.nownow.softpos.creditCardNfcReader.model.enums;
+package com.aicortex.softpos.creditCardNfcReader.model.enums;
 
 /**
  * Transaction type

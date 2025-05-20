@@ -1,5 +1,5 @@
-package com.nownow.softpos.network
-import com.nownow.softpos.BuildConfig
+package com.aicortex.softpos.network
+import com.aicortex.softpos.BuildConfig
 import okhttp3.OkHttpClient
 //import okhttp3.logging.HttpLoggingInterceptor
 import retrofit2.Retrofit

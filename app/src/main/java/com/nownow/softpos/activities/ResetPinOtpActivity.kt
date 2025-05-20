@@ -1,4 +1,4 @@
-package com.nownow.softpos.activities
+package com.aicortex.softpos.activities
 
 import android.content.Intent
 import android.os.Bundle
@@ -6,8 +6,8 @@ import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.text.HtmlCompat
 import androidx.databinding.DataBindingUtil
-import com.nownow.softpos.R
-import com.nownow.softpos.databinding.ActivityResetPinOtpBinding
+import com.aicortex.softpos.R
+import com.aicortex.softpos.databinding.ActivityResetPinOtpBinding
 
 class ResetPinOtpActivity : AppCompatActivity() {
     lateinit var binding: ActivityResetPinOtpBinding

@@ -1,4 +1,4 @@
-package com.nownow.softpos.activities
+package com.aicortex.softpos.activities
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
@@ -8,9 +8,9 @@ import android.webkit.WebChromeClient
 import android.webkit.WebView
 import android.webkit.WebViewClient
 import com.google.android.material.tabs.TabLayout
-import com.nownow.softpos.R
-import com.nownow.softpos.databinding.ActivityPrivacyPolicyBinding
-import com.nownow.softpos.utils.SharedPrefUtils
+import com.aicortex.softpos.R
+import com.aicortex.softpos.databinding.ActivityPrivacyPolicyBinding
+import com.aicortex.softpos.utils.SharedPrefUtils
 
 class PrivacyPolicyActivity : AppCompatActivity() ,OnClickListener{
     lateinit var binding:ActivityPrivacyPolicyBinding

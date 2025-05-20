@@ -1,4 +1,4 @@
-package com.nownow.softpos.utils
+package com.aicortex.softpos.utils
 
 interface IBiometricListener {
     fun onEnrolled()

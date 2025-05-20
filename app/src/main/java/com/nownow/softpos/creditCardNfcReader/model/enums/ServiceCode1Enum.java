@@ -1,4 +1,4 @@
-package com.nownow.softpos.creditCardNfcReader.model.enums;
+package com.aicortex.softpos.creditCardNfcReader.model.enums;
 
 /**
  * Service code, position 1 values.

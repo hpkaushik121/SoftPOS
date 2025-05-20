@@ -1,4 +1,4 @@
-package com.nownow.softpos.models.appConfig
+package com.aicortex.softpos.models.appConfig
 
 import com.google.gson.annotations.SerializedName
 

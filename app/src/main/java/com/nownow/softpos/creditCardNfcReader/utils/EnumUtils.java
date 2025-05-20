@@ -1,6 +1,6 @@
-package com.nownow.softpos.creditCardNfcReader.utils;
+package com.aicortex.softpos.creditCardNfcReader.utils;
 
-import com.nownow.softpos.creditCardNfcReader.model.enums.IKeyEnum;
+import com.aicortex.softpos.creditCardNfcReader.model.enums.IKeyEnum;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;

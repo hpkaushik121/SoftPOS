@@ -1,6 +1,6 @@
-package com.nownow.softpos.api
+package com.aicortex.softpos.api
 
-import com.nownow.softpos.BuildConfig
+import com.aicortex.softpos.BuildConfig
 import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
 

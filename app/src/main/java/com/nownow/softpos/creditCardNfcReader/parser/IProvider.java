@@ -1,9 +1,9 @@
-package com.nownow.softpos.creditCardNfcReader.parser;
+package com.aicortex.softpos.creditCardNfcReader.parser;
 
 
 /*import id.paypro.nfc.creditCardNfcReader.exception.CommunicationException;*/
 
-import com.nownow.softpos.creditCardNfcReader.exception.CommunicationException;
+import com.aicortex.softpos.creditCardNfcReader.exception.CommunicationException;
 
 /**
  * Interface for provider for transmit command to card

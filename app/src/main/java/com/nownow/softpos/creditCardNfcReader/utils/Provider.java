@@ -1,11 +1,11 @@
-package com.nownow.softpos.creditCardNfcReader.utils;
+package com.aicortex.softpos.creditCardNfcReader.utils;
 
 import android.nfc.tech.IsoDep;
 import android.util.Log;
 
-import com.nownow.softpos.creditCardNfcReader.enums.SwEnum;
-import com.nownow.softpos.creditCardNfcReader.exception.CommunicationException;
-import com.nownow.softpos.creditCardNfcReader.parser.IProvider;
+import com.aicortex.softpos.creditCardNfcReader.enums.SwEnum;
+import com.aicortex.softpos.creditCardNfcReader.exception.CommunicationException;
+import com.aicortex.softpos.creditCardNfcReader.parser.IProvider;
 
 import java.io.IOException;
 

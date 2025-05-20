@@ -1,4 +1,4 @@
-package com.nownow.softpos.creditCardNfcReader.utils;
+package com.aicortex.softpos.creditCardNfcReader.utils;
 
 import android.app.Activity;
 import android.app.PendingIntent;
@@ -9,7 +9,7 @@ import android.nfc.tech.IsoDep;
 import android.nfc.tech.NfcA;
 import android.os.Build;
 
-import com.nownow.softpos.application.TapNpayApplication;
+import com.aicortex.softpos.application.TapNpayApplication;
 
 
 

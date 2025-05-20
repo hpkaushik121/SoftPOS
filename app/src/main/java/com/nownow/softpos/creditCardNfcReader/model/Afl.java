@@ -1,4 +1,4 @@
-package com.nownow.softpos.creditCardNfcReader.model;
+package com.aicortex.softpos.creditCardNfcReader.model;
 
 /**
  * Class used to describe Application file locator

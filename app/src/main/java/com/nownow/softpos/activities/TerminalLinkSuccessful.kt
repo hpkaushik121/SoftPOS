@@ -1,4 +1,4 @@
-package com.nownow.softpos.activities
+package com.aicortex.softpos.activities
 
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
@@ -7,11 +7,11 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import com.google.android.material.bottomsheet.BottomSheetDialogFragment
-import com.nownow.softpos.R
-import com.nownow.softpos.databinding.DialogLoginSuccessBinding
-import com.nownow.softpos.databinding.TerminalLinkSuccessfulBinding
-import com.nownow.softpos.utils.Constants
-import com.nownow.softpos.utils.SharedPrefUtils
+import com.aicortex.softpos.R
+import com.aicortex.softpos.databinding.DialogLoginSuccessBinding
+import com.aicortex.softpos.databinding.TerminalLinkSuccessfulBinding
+import com.aicortex.softpos.utils.Constants
+import com.aicortex.softpos.utils.SharedPrefUtils
 
 class TerminalLinkSuccessful : BottomSheetDialogFragment() {
     private lateinit var binding: TerminalLinkSuccessfulBinding

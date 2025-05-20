@@ -1,4 +1,4 @@
-package com.nownow.softpos.creditCardNfcReader.parser;
+package com.aicortex.softpos.creditCardNfcReader.parser;
 
 import java.util.List;
 

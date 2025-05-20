@@ -1,4 +1,4 @@
-package com.nownow.softpos.activities
+package com.aicortex.softpos.activities
 
 import android.content.Intent
 import android.os.Bundle
@@ -6,9 +6,9 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import com.google.android.material.bottomsheet.BottomSheetDialogFragment
-import com.nownow.softpos.R
-import com.nownow.softpos.databinding.DialogPinSuccessBinding
-import com.nownow.softpos.utils.Constants
+import com.aicortex.softpos.R
+import com.aicortex.softpos.databinding.DialogPinSuccessBinding
+import com.aicortex.softpos.utils.Constants
 
 class PinSuccessDialog : BottomSheetDialogFragment() {
 

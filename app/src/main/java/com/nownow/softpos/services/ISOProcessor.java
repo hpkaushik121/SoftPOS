@@ -1,12 +1,12 @@
-package com.nownow.softpos.services;
+package com.aicortex.softpos.services;
 
 import android.util.Log;
 
-import com.nownow.softpos.application.TapNpayApplication;
-import com.nownow.softpos.models.softpos.CardDetails;
-import com.nownow.softpos.models.softpos.TransactionInfo;
-import com.nownow.softpos.utilities.UtilsHandlerPos;
-import com.nownow.softpos.utils.SoftPosConstants;
+import com.aicortex.softpos.application.TapNpayApplication;
+import com.aicortex.softpos.models.softpos.CardDetails;
+import com.aicortex.softpos.models.softpos.TransactionInfo;
+import com.aicortex.softpos.utilities.UtilsHandlerPos;
+import com.aicortex.softpos.utils.SoftPosConstants;
 
 import org.jpos.iso.ISOException;
 import org.jpos.iso.ISOMsg;

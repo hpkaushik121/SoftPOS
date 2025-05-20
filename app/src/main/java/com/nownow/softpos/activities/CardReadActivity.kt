@@ -1,4 +1,4 @@
-package com.nownow.softpos.activities
+package com.aicortex.softpos.activities
 
 
 import android.content.Intent
@@ -14,17 +14,17 @@ import android.widget.Toast
 import androidx.appcompat.app.AlertDialog
 import androidx.databinding.DataBindingUtil
 import com.google.gson.Gson
-import com.nownow.softpos.BuildConfig
-import com.nownow.softpos.R
-import com.nownow.softpos.api.ApiCalls
-import com.nownow.softpos.creditCardNfcReader.CardNfcAsyncTask
-import com.nownow.softpos.creditCardNfcReader.utils.CardNfcUtils
-import com.nownow.softpos.databinding.ActivityCardReadBinding
-import com.nownow.softpos.models.softpos.*
-import com.nownow.softpos.network.ServiceBuilderV2
-import com.nownow.softpos.services.ISOProcessor
-import com.nownow.softpos.utilities.UtilsHandlerPos
-import com.nownow.softpos.utils.*
+import com.aicortex.softpos.BuildConfig
+import com.aicortex.softpos.R
+import com.aicortex.softpos.api.ApiCalls
+import com.aicortex.softpos.creditCardNfcReader.CardNfcAsyncTask
+import com.aicortex.softpos.creditCardNfcReader.utils.CardNfcUtils
+import com.aicortex.softpos.databinding.ActivityCardReadBinding
+import com.aicortex.softpos.models.softpos.*
+import com.aicortex.softpos.network.ServiceBuilderV2
+import com.aicortex.softpos.services.ISOProcessor
+import com.aicortex.softpos.utilities.UtilsHandlerPos
+import com.aicortex.softpos.utils.*
 import org.jpos.iso.ISOMsg
 import retrofit2.Call
 import retrofit2.Callback

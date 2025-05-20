@@ -1,16 +1,16 @@
-package com.nownow.softpos.creditCardNfcReader.utils;
+package com.aicortex.softpos.creditCardNfcReader.utils;
 
-import static com.nownow.softpos.creditCardNfcReader.enums.TagValueTypeEnum.DOL;
-import static com.nownow.softpos.creditCardNfcReader.parser.apdu.impl.DataFactory.LOGGER;
+import static com.aicortex.softpos.creditCardNfcReader.enums.TagValueTypeEnum.DOL;
+import static com.aicortex.softpos.creditCardNfcReader.parser.apdu.impl.DataFactory.LOGGER;
 
 import com.google.gson.Gson;
-import com.nownow.softpos.creditCardNfcReader.enums.SwEnum;
-import com.nownow.softpos.creditCardNfcReader.exception.TlvException;
-import com.nownow.softpos.creditCardNfcReader.iso7816emv.EmvTags;
-import com.nownow.softpos.creditCardNfcReader.iso7816emv.ITag;
-import com.nownow.softpos.creditCardNfcReader.iso7816emv.TLV;
-import com.nownow.softpos.creditCardNfcReader.iso7816emv.TagAndLength;
-import com.nownow.softpos.creditCardNfcReader.model.TLVP;
+import com.aicortex.softpos.creditCardNfcReader.enums.SwEnum;
+import com.aicortex.softpos.creditCardNfcReader.exception.TlvException;
+import com.aicortex.softpos.creditCardNfcReader.iso7816emv.EmvTags;
+import com.aicortex.softpos.creditCardNfcReader.iso7816emv.ITag;
+import com.aicortex.softpos.creditCardNfcReader.iso7816emv.TLV;
+import com.aicortex.softpos.creditCardNfcReader.iso7816emv.TagAndLength;
+import com.aicortex.softpos.creditCardNfcReader.model.TLVP;
 
 import org.apache.commons.lang3.ArrayUtils;
 import org.apache.commons.lang3.StringUtils;
@@ -388,9 +388,9 @@ public final class TlvUtil {
 
 				TLV tlv = TlvUtil.getNextTLV(stream);
 				TLVP tlvp=new TLVP();
-				tlvp.setTag(com.nownow.softpos.creditCardNfcReader.utils.BytesUtils.bytesToString(tlv.getTagBytes()));
+				tlvp.setTag(com.aicortex.softpos.creditCardNfcReader.utils.BytesUtils.bytesToString(tlv.getTagBytes()));
 				tlvp.setLength(tlv.getLength()+"");
-				tlvp.setValue(com.nownow.softpos.creditCardNfcReader.utils.BytesUtils.bytesToString(tlv.getValueBytes()));
+				tlvp.setValue(com.aicortex.softpos.creditCardNfcReader.utils.BytesUtils.bytesToString(tlv.getValueBytes()));
 				LOGGER.debug(new Gson().toJson(tlvp));
 				if (ArrayUtils.contains(pTag, tlv.getTag())) {
 					return tlv.getValueBytes();
@@ -426,9 +426,9 @@ public final class TlvUtil {
 
 				TLV tlv = TlvUtil.getNextTLV(stream);
 				TLVP tlvp=new TLVP();
-				tlvp.setTag(com.nownow.softpos.creditCardNfcReader.utils.BytesUtils.bytesToString(tlv.getTagBytes()));
+				tlvp.setTag(com.aicortex.softpos.creditCardNfcReader.utils.BytesUtils.bytesToString(tlv.getTagBytes()));
 				tlvp.setLength(tlv.getLength()+"");
-				tlvp.setValue(com.nownow.softpos.creditCardNfcReader.utils.BytesUtils.bytesToString(tlv.getValueBytes()));
+				tlvp.setValue(com.aicortex.softpos.creditCardNfcReader.utils.BytesUtils.bytesToString(tlv.getValueBytes()));
 				LOGGER.debug(new Gson().toJson(tlvp));
 				if (ArrayUtils.contains(pTag, tlv.getTag())) {
 					return tlv;

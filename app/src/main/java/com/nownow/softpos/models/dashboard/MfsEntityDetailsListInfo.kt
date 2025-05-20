@@ -1,6 +1,6 @@
-package com.nownow.softpos.models.dashboard
+package com.aicortex.softpos.models.dashboard
 
-import com.nownow.softpos.models.core.response.MfsEntityInfo
+import com.aicortex.softpos.models.core.response.MfsEntityInfo
 
 data class MfsEntityDetailsListInfo(
     val additionalFields: List<AdditionalField>,

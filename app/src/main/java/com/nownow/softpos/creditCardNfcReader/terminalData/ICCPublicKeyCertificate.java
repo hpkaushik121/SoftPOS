@@ -1,7 +1,7 @@
-package com.nownow.softpos.creditCardNfcReader.terminalData;
+package com.aicortex.softpos.creditCardNfcReader.terminalData;
 
-import com.nownow.softpos.creditCardNfcReader.iso7816emv.TLV;
-import com.nownow.softpos.creditCardNfcReader.utils.TlvUtil;
+import com.aicortex.softpos.creditCardNfcReader.iso7816emv.TLV;
+import com.aicortex.softpos.creditCardNfcReader.utils.TlvUtil;
 
 import java.io.ByteArrayInputStream;
 import java.io.ByteArrayOutputStream;

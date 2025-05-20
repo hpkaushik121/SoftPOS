@@ -1,4 +1,4 @@
-package com.nownow.softpos.activities
+package com.aicortex.softpos.activities
 
 
 import android.annotation.SuppressLint
@@ -18,14 +18,14 @@ import com.google.android.material.bottomsheet.BottomSheetBehavior
 import com.google.android.material.bottomsheet.BottomSheetDialog
 import com.google.android.material.bottomsheet.BottomSheetDialogFragment
 import com.google.gson.Gson
-import com.nownow.softpos.BuildConfig
-import com.nownow.softpos.R
-import com.nownow.softpos.api.ApiCalls
-import com.nownow.softpos.databinding.ActivityInputAmountBinding
-import com.nownow.softpos.models.softpos.*
-import com.nownow.softpos.network.ServiceBuilderV2
-import com.nownow.softpos.utils.*
-import com.nownow.softpos.utils.UtilHandler.getDeviceId
+import com.aicortex.softpos.BuildConfig
+import com.aicortex.softpos.R
+import com.aicortex.softpos.api.ApiCalls
+import com.aicortex.softpos.databinding.ActivityInputAmountBinding
+import com.aicortex.softpos.models.softpos.*
+import com.aicortex.softpos.network.ServiceBuilderV2
+import com.aicortex.softpos.utils.*
+import com.aicortex.softpos.utils.UtilHandler.getDeviceId
 import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response

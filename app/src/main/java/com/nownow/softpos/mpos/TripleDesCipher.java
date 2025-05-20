@@ -1,4 +1,4 @@
-package com.nownow.softpos.mpos;
+package com.aicortex.softpos.mpos;
 
 import javax.crypto.Cipher;
 import javax.crypto.SecretKey;

@@ -1,4 +1,4 @@
-package com.nownow.softpos.utils
+package com.aicortex.softpos.utils
 
 import android.app.Activity
 import android.content.Context
@@ -19,7 +19,7 @@ import android.widget.TextView
 import android.widget.Toast
 import com.google.android.material.R
 import com.google.android.material.snackbar.Snackbar
-import com.nownow.softpos.application.TapNpayApplication
+import com.aicortex.softpos.application.TapNpayApplication
 import com.spice.paypro.Security
 import org.json.JSONObject
 import java.security.NoSuchAlgorithmException

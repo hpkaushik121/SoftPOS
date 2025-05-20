@@ -1,11 +1,11 @@
-package com.nownow.softpos.utils
+package com.aicortex.softpos.utils
 import android.content.Context
 import android.telephony.TelephonyManager
 import android.util.Log
 /*import com.appsflyer.AppsFlyerLib
 import com.appsflyer.attribution.AppsFlyerRequestListener*/
-import com.nownow.softpos.BuildConfig
-import com.nownow.softpos.application.TapNpayApplication
+import com.aicortex.softpos.BuildConfig
+import com.aicortex.softpos.application.TapNpayApplication
 
 
 class AppsflyerEventPostback {

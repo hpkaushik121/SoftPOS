@@ -1,4 +1,4 @@
-package com.nownow.softpos.models.dashboard
+package com.aicortex.softpos.models.dashboard
 
 import android.os.Parcel
 import android.os.Parcelable

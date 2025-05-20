@@ -1,8 +1,8 @@
-package com.nownow.softpos.creditCardNfcReader.parser.apdu.impl;
+package com.aicortex.softpos.creditCardNfcReader.parser.apdu.impl;
 
-import com.nownow.softpos.creditCardNfcReader.model.enums.IKeyEnum;
-import com.nownow.softpos.creditCardNfcReader.parser.apdu.annotation.AnnotationData;
-import com.nownow.softpos.creditCardNfcReader.utils.EnumUtils;
+import com.aicortex.softpos.creditCardNfcReader.model.enums.IKeyEnum;
+import com.aicortex.softpos.creditCardNfcReader.parser.apdu.annotation.AnnotationData;
+import com.aicortex.softpos.creditCardNfcReader.utils.EnumUtils;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;

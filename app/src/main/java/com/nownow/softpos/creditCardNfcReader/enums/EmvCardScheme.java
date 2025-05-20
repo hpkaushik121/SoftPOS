@@ -1,8 +1,8 @@
-package com.nownow.softpos.creditCardNfcReader.enums;
+package com.aicortex.softpos.creditCardNfcReader.enums;
 
 
 
-import com.nownow.softpos.creditCardNfcReader.utils.BytesUtils;
+import com.aicortex.softpos.creditCardNfcReader.utils.BytesUtils;
 
 import org.apache.commons.lang3.StringUtils;
 

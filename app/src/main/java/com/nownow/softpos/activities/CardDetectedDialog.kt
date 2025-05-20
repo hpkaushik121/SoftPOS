@@ -1,4 +1,4 @@
-package com.nownow.softpos.activities
+package com.aicortex.softpos.activities
 
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
@@ -9,10 +9,10 @@ import android.view.ViewGroup
 import androidx.core.content.res.ResourcesCompat.getDrawable
 import androidx.databinding.DataBindingUtil
 import com.google.android.material.bottomsheet.BottomSheetDialogFragment
-import com.nownow.softpos.R
-import com.nownow.softpos.databinding.ActivityCardDetectedDialogBinding
-import com.nownow.softpos.databinding.DialogPinSuccessBinding
-import com.nownow.softpos.utils.Constants
+import com.aicortex.softpos.R
+import com.aicortex.softpos.databinding.ActivityCardDetectedDialogBinding
+import com.aicortex.softpos.databinding.DialogPinSuccessBinding
+import com.aicortex.softpos.utils.Constants
 
 class CardDetectedDialog : BottomSheetDialogFragment() {
     lateinit var binding: ActivityCardDetectedDialogBinding

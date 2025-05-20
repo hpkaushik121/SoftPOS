@@ -1,18 +1,18 @@
-package com.nownow.softpos.api
+package com.aicortex.softpos.api
 
-import com.nownow.softpos.models.appConfig.AppConfigRequestModel
-import com.nownow.softpos.models.appConfig.AppConfigResponse
-import com.nownow.softpos.models.core.request.CoreServiceRequest
-import com.nownow.softpos.models.core.request.FloorLimitRequest
-import com.nownow.softpos.models.core.response.BankListModel
-import com.nownow.softpos.models.core.response.CoreResponseModel
-import com.nownow.softpos.models.dashboard.CommonDashboardResponseBaseModel
-import com.nownow.softpos.models.downloadPdfModels.DownloadPdfRequest
-import com.nownow.softpos.models.downloadPdfModels.DownloadPdfResponse
-import com.nownow.softpos.models.mapterminalmodels.MapTerminalRequestModel
-import com.nownow.softpos.models.mapterminalmodels.MapTerminalResponseModel
-import com.nownow.softpos.models.otpResponse.CoreOtpResponse
-import com.nownow.softpos.models.softpos.*
+import com.aicortex.softpos.models.appConfig.AppConfigRequestModel
+import com.aicortex.softpos.models.appConfig.AppConfigResponse
+import com.aicortex.softpos.models.core.request.CoreServiceRequest
+import com.aicortex.softpos.models.core.request.FloorLimitRequest
+import com.aicortex.softpos.models.core.response.BankListModel
+import com.aicortex.softpos.models.core.response.CoreResponseModel
+import com.aicortex.softpos.models.dashboard.CommonDashboardResponseBaseModel
+import com.aicortex.softpos.models.downloadPdfModels.DownloadPdfRequest
+import com.aicortex.softpos.models.downloadPdfModels.DownloadPdfResponse
+import com.aicortex.softpos.models.mapterminalmodels.MapTerminalRequestModel
+import com.aicortex.softpos.models.mapterminalmodels.MapTerminalResponseModel
+import com.aicortex.softpos.models.otpResponse.CoreOtpResponse
+import com.aicortex.softpos.models.softpos.*
 import retrofit2.Call
 import retrofit2.http.*
 

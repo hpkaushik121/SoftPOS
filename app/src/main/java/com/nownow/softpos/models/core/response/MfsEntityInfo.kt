@@ -1,6 +1,6 @@
-package com.nownow.softpos.models.core.response
+package com.aicortex.softpos.models.core.response
 
-import com.nownow.softpos.models.dashboard.WalletInfo
+import com.aicortex.softpos.models.dashboard.WalletInfo
 
 data class MfsEntityInfo(
     val idType: String? = null,

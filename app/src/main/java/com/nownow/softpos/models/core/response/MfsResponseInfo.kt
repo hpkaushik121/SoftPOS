@@ -1,8 +1,8 @@
-package com.nownow.softpos.models.core.response
+package com.aicortex.softpos.models.core.response
 
 import com.google.gson.annotations.Expose
 import com.google.gson.annotations.SerializedName
-import com.nownow.softpos.models.dashboard.TransactionListInfo
+import com.aicortex.softpos.models.dashboard.TransactionListInfo
 
 data class MfsResponseInfo(
     @SerializedName("token")

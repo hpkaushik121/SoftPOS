@@ -1,4 +1,4 @@
-package com.nownow.softpos.utils
+package com.aicortex.softpos.utils
 
 import android.app.ProgressDialog
 import android.content.Context
@@ -10,7 +10,7 @@ import android.widget.ProgressBar
 import android.widget.TextView
 import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.widget.AppCompatButton
-import com.nownow.softpos.R
+import com.aicortex.softpos.R
 
 
 class DialogUtils {

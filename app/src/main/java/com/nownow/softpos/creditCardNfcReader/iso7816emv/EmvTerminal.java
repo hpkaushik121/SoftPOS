@@ -1,15 +1,15 @@
-package com.nownow.softpos.creditCardNfcReader.iso7816emv;
+package com.aicortex.softpos.creditCardNfcReader.iso7816emv;
 
 //import static id.paypro.nfc.creditCardNfcReader.parser.EmvParser.padleft;
 
-import static com.nownow.softpos.creditCardNfcReader.parser.EmvParser.padleft;
+import static com.aicortex.softpos.creditCardNfcReader.parser.EmvParser.padleft;
 
-import com.nownow.softpos.creditCardNfcReader.model.enums.CountryCodeEnum;
-import com.nownow.softpos.creditCardNfcReader.model.enums.CurrencyEnum;
-import com.nownow.softpos.creditCardNfcReader.model.enums.TransactionTypeEnum;
-import com.nownow.softpos.creditCardNfcReader.parser.EmvParser;
-import com.nownow.softpos.creditCardNfcReader.terminalData.TerminalVerificationResults;
-import com.nownow.softpos.creditCardNfcReader.utils.BytesUtils;
+import com.aicortex.softpos.creditCardNfcReader.model.enums.CountryCodeEnum;
+import com.aicortex.softpos.creditCardNfcReader.model.enums.CurrencyEnum;
+import com.aicortex.softpos.creditCardNfcReader.model.enums.TransactionTypeEnum;
+import com.aicortex.softpos.creditCardNfcReader.parser.EmvParser;
+import com.aicortex.softpos.creditCardNfcReader.terminalData.TerminalVerificationResults;
+import com.aicortex.softpos.creditCardNfcReader.utils.BytesUtils;
 
 import org.apache.commons.lang3.StringUtils;
 

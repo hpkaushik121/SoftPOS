@@ -1,6 +1,6 @@
-package com.nownow.softpos.creditCardNfcReader.iso7816emv;
+package com.aicortex.softpos.creditCardNfcReader.iso7816emv;
 
-import com.nownow.softpos.creditCardNfcReader.utils.BytesUtils;
+import com.aicortex.softpos.creditCardNfcReader.utils.BytesUtils;
 
 import java.util.Arrays;
 

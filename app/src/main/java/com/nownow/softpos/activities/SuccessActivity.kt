@@ -1,4 +1,4 @@
-package com.nownow.softpos.activities
+package com.aicortex.softpos.activities
 
 import android.Manifest
 import android.annotation.SuppressLint
@@ -30,19 +30,19 @@ import androidx.core.content.ContextCompat
 import androidx.core.content.FileProvider
 import androidx.databinding.DataBindingUtil
 import com.google.gson.Gson
-import com.nownow.softpos.BuildConfig
-import com.nownow.softpos.R
-import com.nownow.softpos.api.ApiCalls
-import com.nownow.softpos.databinding.ActivitySuccessBinding
-import com.nownow.softpos.models.core.request.*
-import com.nownow.softpos.models.core.response.BankListModel
-import com.nownow.softpos.models.core.response.CoreResponseModel
-import com.nownow.softpos.models.dashboard.TransactionInfo
-import com.nownow.softpos.models.downloadPdfModels.DownloadPdfRequest
-import com.nownow.softpos.models.downloadPdfModels.DownloadPdfResponse
-import com.nownow.softpos.network.ServiceBuilder
-import com.nownow.softpos.utilities.UtilsHandlerPos
-import com.nownow.softpos.utils.*
+import com.aicortex.softpos.BuildConfig
+import com.aicortex.softpos.R
+import com.aicortex.softpos.api.ApiCalls
+import com.aicortex.softpos.databinding.ActivitySuccessBinding
+import com.aicortex.softpos.models.core.request.*
+import com.aicortex.softpos.models.core.response.BankListModel
+import com.aicortex.softpos.models.core.response.CoreResponseModel
+import com.aicortex.softpos.models.dashboard.TransactionInfo
+import com.aicortex.softpos.models.downloadPdfModels.DownloadPdfRequest
+import com.aicortex.softpos.models.downloadPdfModels.DownloadPdfResponse
+import com.aicortex.softpos.network.ServiceBuilder
+import com.aicortex.softpos.utilities.UtilsHandlerPos
+import com.aicortex.softpos.utils.*
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.GlobalScope
 import kotlinx.coroutines.launch
@@ -860,11 +860,11 @@ class SuccessActivity : BaseActivity(), OnClickListener {
         val date = Date()
         val format = DateFormat.format("MM-dd-yyyy_hh:mm:ss", date)
         try {
-            val mainDir = File(getExternalFilesDir(Environment.DIRECTORY_PICTURES), "NowNow")
+            val mainDir = File(getExternalFilesDir(Environment.DIRECTORY_PICTURES), "aicortex")
             if (!mainDir.exists()) {
                 val mkdir = mainDir.mkdir()
             }
-            val path = "$mainDir/nownow-$format.jpeg"
+            val path = "$mainDir/aicortex-$format.jpeg"
 
             /* binding.getRoot().setDrawingCacheEnabled(true);
             Bitmap bitmap = Bitmap.createBitmap(getWholeListViewItemsToBitmap());

@@ -1,4 +1,4 @@
-package com.nownow.softpos.models.dashboard
+package com.aicortex.softpos.models.dashboard
 
 data class Wallet(
     val availBalance: String,

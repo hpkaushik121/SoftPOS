@@ -1,4 +1,4 @@
-package com.nownow.softpos.activities
+package com.aicortex.softpos.activities
 
 import android.app.Activity
 import android.content.Context
@@ -13,12 +13,12 @@ import android.view.WindowManager
 import android.view.inputmethod.InputMethodManager
 import android.widget.EditText
 import androidx.databinding.DataBindingUtil
-import com.nownow.softpos.R
-import com.nownow.softpos.databinding.ActivityCardPinBinding
-import com.nownow.softpos.utils.Constants
-import com.nownow.softpos.utils.SharedPrefUtils
-import com.nownow.softpos.utils.SoftPosConstants
-import com.nownow.softpos.utils.UtilHandler
+import com.aicortex.softpos.R
+import com.aicortex.softpos.databinding.ActivityCardPinBinding
+import com.aicortex.softpos.utils.Constants
+import com.aicortex.softpos.utils.SharedPrefUtils
+import com.aicortex.softpos.utils.SoftPosConstants
+import com.aicortex.softpos.utils.UtilHandler
 import org.jpos.iso.ISOUtil
 
 

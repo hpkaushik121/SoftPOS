@@ -1,4 +1,4 @@
-package com.nownow.softpos.creditCardNfcReader.model.enums;
+package com.aicortex.softpos.creditCardNfcReader.model.enums;
 /**
  * <a href="http://en.wikipedia.org/wiki/ISO_3166-1">ISO 3166-1</a> country code.
  * 

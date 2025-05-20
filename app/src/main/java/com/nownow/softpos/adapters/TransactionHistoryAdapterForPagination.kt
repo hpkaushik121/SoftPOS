@@ -1,4 +1,4 @@
-package com.nownow.softpos.adapters
+package com.aicortex.softpos.adapters
 
 import android.content.Context
 import android.content.Intent
@@ -12,14 +12,14 @@ import android.widget.TextView
 import androidx.constraintlayout.widget.ConstraintLayout
 import androidx.core.content.ContextCompat
 import androidx.recyclerview.widget.RecyclerView
-import com.nownow.softpos.R
-import com.nownow.softpos.R.string
-import com.nownow.softpos.activities.DashboardActivity
-import com.nownow.softpos.activities.SuccessActivity
-import com.nownow.softpos.models.dashboard.TransactionInfo
-import com.nownow.softpos.utils.Constants
-import com.nownow.softpos.utils.DialogUtils
-import com.nownow.softpos.utils.UtilHandler
+import com.aicortex.softpos.R
+import com.aicortex.softpos.R.string
+import com.aicortex.softpos.activities.DashboardActivity
+import com.aicortex.softpos.activities.SuccessActivity
+import com.aicortex.softpos.models.dashboard.TransactionInfo
+import com.aicortex.softpos.utils.Constants
+import com.aicortex.softpos.utils.DialogUtils
+import com.aicortex.softpos.utils.UtilHandler
 
 class TransactionHistoryAdapterForPagination(val context: Context, var list: MutableList<TransactionInfo>?) :
     RecyclerView.Adapter<TransactionHistoryAdapterForPagination.ViewHolder>() {

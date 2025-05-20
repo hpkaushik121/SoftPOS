@@ -1,6 +1,6 @@
-package com.nownow.softpos.creditCardNfcReader.parser.apdu;
+package com.aicortex.softpos.creditCardNfcReader.parser.apdu;
 
-import com.nownow.softpos.creditCardNfcReader.iso7816emv.TagAndLength;
+import com.aicortex.softpos.creditCardNfcReader.iso7816emv.TagAndLength;
 
 import java.util.List;
 

@@ -1,8 +1,8 @@
-package com.nownow.softpos.creditCardNfcReader.iso7816emv;
+package com.aicortex.softpos.creditCardNfcReader.iso7816emv;
 
 
-import com.nownow.softpos.creditCardNfcReader.enums.TagTypeEnum;
-import com.nownow.softpos.creditCardNfcReader.enums.TagValueTypeEnum;
+import com.aicortex.softpos.creditCardNfcReader.enums.TagTypeEnum;
+import com.aicortex.softpos.creditCardNfcReader.enums.TagValueTypeEnum;
 
 /*import id.paypro.nfc.creditCardNfcReader.enums.TagTypeEnum;
 import id.paypro.nfc.creditCardNfcReader.enums.TagValueTypeEnum;*/

@@ -1,4 +1,4 @@
-package com.nownow.softpos.activities
+package com.aicortex.softpos.activities
 
 
 import android.content.Context
@@ -13,14 +13,14 @@ import android.view.View.OnClickListener
 import android.view.ViewGroup
 import com.google.android.material.bottomsheet.BottomSheetDialogFragment
 import com.google.gson.Gson
-import com.nownow.softpos.BuildConfig
-import com.nownow.softpos.R
-import com.nownow.softpos.api.ApiCalls
-import com.nownow.softpos.databinding.MapTerminalDialogBinding
-import com.nownow.softpos.models.mapterminalmodels.MapTerminalRequestModel
-import com.nownow.softpos.models.mapterminalmodels.MapTerminalResponseModel
-import com.nownow.softpos.network.ServiceBuilderV2
-import com.nownow.softpos.utils.*
+import com.aicortex.softpos.BuildConfig
+import com.aicortex.softpos.R
+import com.aicortex.softpos.api.ApiCalls
+import com.aicortex.softpos.databinding.MapTerminalDialogBinding
+import com.aicortex.softpos.models.mapterminalmodels.MapTerminalRequestModel
+import com.aicortex.softpos.models.mapterminalmodels.MapTerminalResponseModel
+import com.aicortex.softpos.network.ServiceBuilderV2
+import com.aicortex.softpos.utils.*
 import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response

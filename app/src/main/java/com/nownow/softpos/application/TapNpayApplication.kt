@@ -1,12 +1,12 @@
-package com.nownow.softpos.application
+package com.aicortex.softpos.application
 
 import android.app.Application
 import android.util.Log
 /*import com.appsflyer.AppsFlyerConversionListener
 import com.appsflyer.AppsFlyerLib
 import com.appsflyer.attribution.AppsFlyerRequestListener*/
-import com.nownow.softpos.BuildConfig
-import com.nownow.softpos.utils.Constants
+import com.aicortex.softpos.BuildConfig
+import com.aicortex.softpos.utils.Constants
 import java.util.*
 
 

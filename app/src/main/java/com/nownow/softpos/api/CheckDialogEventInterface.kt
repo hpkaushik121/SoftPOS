@@ -1,4 +1,4 @@
-package com.nownow.softpos.api
+package com.aicortex.softpos.api
 
 interface CheckDialogEventInterface {
     fun onDismiss(screenName: String)

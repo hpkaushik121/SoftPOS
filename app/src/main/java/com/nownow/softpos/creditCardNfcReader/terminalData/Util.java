@@ -1,4 +1,4 @@
-package com.nownow.softpos.creditCardNfcReader.terminalData;
+package com.aicortex.softpos.creditCardNfcReader.terminalData;
 
 
 import java.io.BufferedWriter;

@@ -1,9 +1,9 @@
-package com.nownow.softpos.creditCardNfcReader.iso7816emv;
+package com.aicortex.softpos.creditCardNfcReader.iso7816emv;
 
 
 
-import com.nownow.softpos.creditCardNfcReader.enums.TagValueTypeEnum;
-import com.nownow.softpos.creditCardNfcReader.iso7816emv.impl.TagImpl;
+import com.aicortex.softpos.creditCardNfcReader.enums.TagValueTypeEnum;
+import com.aicortex.softpos.creditCardNfcReader.iso7816emv.impl.TagImpl;
 
 import java.lang.reflect.Field;
 import java.util.LinkedHashMap;

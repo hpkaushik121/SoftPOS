@@ -1,4 +1,4 @@
-package com.nownow.softpos.utils
+package com.aicortex.softpos.utils
 
 import android.os.Build
 import android.util.Log

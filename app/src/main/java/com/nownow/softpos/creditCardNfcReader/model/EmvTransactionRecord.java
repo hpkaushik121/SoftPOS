@@ -1,13 +1,13 @@
-package com.nownow.softpos.creditCardNfcReader.model;
+package com.aicortex.softpos.creditCardNfcReader.model;
 
 
 
-import com.nownow.softpos.creditCardNfcReader.model.enums.CountryCodeEnum;
-import com.nownow.softpos.creditCardNfcReader.model.enums.CurrencyEnum;
-import com.nownow.softpos.creditCardNfcReader.model.enums.TransactionTypeEnum;
-import com.nownow.softpos.creditCardNfcReader.parser.apdu.annotation.Data;
-import com.nownow.softpos.creditCardNfcReader.parser.apdu.impl.AbstractByteBean;
-import com.nownow.softpos.creditCardNfcReader.parser.apdu.impl.DataFactory;
+import com.aicortex.softpos.creditCardNfcReader.model.enums.CountryCodeEnum;
+import com.aicortex.softpos.creditCardNfcReader.model.enums.CurrencyEnum;
+import com.aicortex.softpos.creditCardNfcReader.model.enums.TransactionTypeEnum;
+import com.aicortex.softpos.creditCardNfcReader.parser.apdu.annotation.Data;
+import com.aicortex.softpos.creditCardNfcReader.parser.apdu.impl.AbstractByteBean;
+import com.aicortex.softpos.creditCardNfcReader.parser.apdu.impl.DataFactory;
 
 import java.io.Serializable;
 import java.util.Date;

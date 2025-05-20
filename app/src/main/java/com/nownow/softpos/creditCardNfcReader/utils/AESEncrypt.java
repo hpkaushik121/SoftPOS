@@ -1,4 +1,4 @@
-package com.nownow.softpos.creditCardNfcReader.utils;
+package com.aicortex.softpos.creditCardNfcReader.utils;
 
 import android.util.Base64;
 import android.util.Log;

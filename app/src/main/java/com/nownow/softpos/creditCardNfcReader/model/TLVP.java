@@ -1,4 +1,4 @@
-package com.nownow.softpos.creditCardNfcReader.model;
+package com.aicortex.softpos.creditCardNfcReader.model;
 
 public class TLVP {
     private String tag;

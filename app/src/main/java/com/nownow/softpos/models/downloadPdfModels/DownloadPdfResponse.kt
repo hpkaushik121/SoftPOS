@@ -1,4 +1,4 @@
-package com.nownow.softpos.models.downloadPdfModels
+package com.aicortex.softpos.models.downloadPdfModels
 
 data class DownloadPdfResponse(
     var link: String,

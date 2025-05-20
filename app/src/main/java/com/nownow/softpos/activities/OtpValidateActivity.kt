@@ -1,4 +1,4 @@
-package com.nownow.softpos.activities
+package com.aicortex.softpos.activities
 
 import android.content.Context
 import android.content.Intent
@@ -21,18 +21,18 @@ import androidx.core.content.ContextCompat
 import androidx.databinding.DataBindingUtil
 import androidx.lifecycle.ViewModelProvider
 import com.google.gson.Gson
-import com.nownow.softpos.BuildConfig
-import com.nownow.softpos.R
-import com.nownow.softpos.api.ApiCalls
-import com.nownow.softpos.api.CheckDialogEventInterface
-import com.nownow.softpos.databinding.ActivityOtpValidateBinding
-import com.nownow.softpos.helper.BiometricHelper
-import com.nownow.softpos.models.VerifyViewModel
-import com.nownow.softpos.models.core.request.*
-import com.nownow.softpos.models.core.response.CoreResponseModel
-import com.nownow.softpos.models.otpResponse.CoreOtpResponse
-import com.nownow.softpos.network.ServiceBuilder
-import com.nownow.softpos.utils.*
+import com.aicortex.softpos.BuildConfig
+import com.aicortex.softpos.R
+import com.aicortex.softpos.api.ApiCalls
+import com.aicortex.softpos.api.CheckDialogEventInterface
+import com.aicortex.softpos.databinding.ActivityOtpValidateBinding
+import com.aicortex.softpos.helper.BiometricHelper
+import com.aicortex.softpos.models.VerifyViewModel
+import com.aicortex.softpos.models.core.request.*
+import com.aicortex.softpos.models.core.response.CoreResponseModel
+import com.aicortex.softpos.models.otpResponse.CoreOtpResponse
+import com.aicortex.softpos.network.ServiceBuilder
+import com.aicortex.softpos.utils.*
 import org.json.JSONObject
 import retrofit2.Call
 import retrofit2.Callback

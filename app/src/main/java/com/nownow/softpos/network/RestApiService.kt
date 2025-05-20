@@ -1,11 +1,11 @@
-package com.nownow.softpos.network
+package com.aicortex.softpos.network
 
 import android.content.Context
-import com.nownow.softpos.api.ApiCalls
-import com.nownow.softpos.models.softpos.CommonQposRequestModel
-import com.nownow.softpos.models.softpos.TerminaldataResponseModel
-import com.nownow.softpos.utils.Constants
-import com.nownow.softpos.utils.UtilHandler
+import com.aicortex.softpos.api.ApiCalls
+import com.aicortex.softpos.models.softpos.CommonQposRequestModel
+import com.aicortex.softpos.models.softpos.TerminaldataResponseModel
+import com.aicortex.softpos.utils.Constants
+import com.aicortex.softpos.utils.UtilHandler
 
 import retrofit2.Call
 import retrofit2.Callback

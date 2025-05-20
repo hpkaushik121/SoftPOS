@@ -207,7 +207,7 @@
                           android:layout_marginLeft="@dimen/dp_10"
                           android:hint=""
                           android:enabled="false"
-                          android:text="NowNow Digital Systems Ltd"
+                          android:text="aicortex Digital Systems Ltd"
                           android:textColorHint="@color/transaction_history_back_layout"
                           android:textSize="@dimen/sp_16"
                           android:textColor="@color/colorNfcText"

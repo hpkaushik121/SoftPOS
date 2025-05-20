@@ -1,8 +1,8 @@
-package com.nownow.softpos.creditCardNfcReader.utils;
+package com.aicortex.softpos.creditCardNfcReader.utils;
 
-import com.nownow.softpos.creditCardNfcReader.iso7816emv.EmvTags;
-import com.nownow.softpos.creditCardNfcReader.model.EmvCard;
-import com.nownow.softpos.creditCardNfcReader.model.Service;
+import com.aicortex.softpos.creditCardNfcReader.iso7816emv.EmvTags;
+import com.aicortex.softpos.creditCardNfcReader.model.EmvCard;
+import com.aicortex.softpos.creditCardNfcReader.model.Service;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;

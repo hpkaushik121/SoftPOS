@@ -1,4 +1,4 @@
-package com.nownow.softpos.models.otpResponse
+package com.aicortex.softpos.models.otpResponse
 
 import com.google.gson.annotations.Expose
 import com.google.gson.annotations.SerializedName

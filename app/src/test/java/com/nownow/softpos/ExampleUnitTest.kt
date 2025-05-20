@@ -1,4 +1,4 @@
-package com.nownow.softpos
+package com.aicortex.softpos
 
 import org.junit.Test
 

@@ -1,4 +1,4 @@
-package com.nownow.softpos.models.mapterminalmodels
+package com.aicortex.softpos.models.mapterminalmodels
 
 data class MapTerminalRequestModel(
 

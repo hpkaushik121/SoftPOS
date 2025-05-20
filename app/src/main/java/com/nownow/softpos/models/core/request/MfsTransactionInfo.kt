@@ -1,4 +1,4 @@
-package com.nownow.softpos.models.core.request
+package com.aicortex.softpos.models.core.request
 
 import com.google.gson.annotations.SerializedName
 import com.google.gson.annotations.Expose

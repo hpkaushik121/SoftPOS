@@ -1,9 +1,9 @@
-package com.nownow.softpos.creditCardNfcReader.terminalData;
+package com.aicortex.softpos.creditCardNfcReader.terminalData;
 
 
-import com.nownow.softpos.creditCardNfcReader.iso7816emv.EmvTags;
-import com.nownow.softpos.creditCardNfcReader.iso7816emv.TagAndLength;
-import com.nownow.softpos.creditCardNfcReader.iso7816emv.TerminalTransactionQualifiers;
+import com.aicortex.softpos.creditCardNfcReader.iso7816emv.EmvTags;
+import com.aicortex.softpos.creditCardNfcReader.iso7816emv.TagAndLength;
+import com.aicortex.softpos.creditCardNfcReader.iso7816emv.TerminalTransactionQualifiers;
 
 import java.io.FileInputStream;
 import java.io.IOException;

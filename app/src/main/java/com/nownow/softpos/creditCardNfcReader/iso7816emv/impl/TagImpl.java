@@ -1,11 +1,11 @@
-package com.nownow.softpos.creditCardNfcReader.iso7816emv.impl;
+package com.aicortex.softpos.creditCardNfcReader.iso7816emv.impl;
 
 
 
-import com.nownow.softpos.creditCardNfcReader.enums.TagTypeEnum;
-import com.nownow.softpos.creditCardNfcReader.enums.TagValueTypeEnum;
-import com.nownow.softpos.creditCardNfcReader.iso7816emv.ITag;
-import com.nownow.softpos.creditCardNfcReader.utils.BytesUtils;
+import com.aicortex.softpos.creditCardNfcReader.enums.TagTypeEnum;
+import com.aicortex.softpos.creditCardNfcReader.enums.TagValueTypeEnum;
+import com.aicortex.softpos.creditCardNfcReader.iso7816emv.ITag;
+import com.aicortex.softpos.creditCardNfcReader.utils.BytesUtils;
 
 import java.util.Arrays;
 

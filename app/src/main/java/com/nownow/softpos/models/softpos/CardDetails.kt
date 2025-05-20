@@ -1,4 +1,4 @@
-package com.nownow.softpos.models.softpos
+package com.aicortex.softpos.models.softpos
 data class CardDetails(
     val aid: String,
     val cardHolderName: String,

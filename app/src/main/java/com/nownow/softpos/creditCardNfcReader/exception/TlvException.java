@@ -1,4 +1,4 @@
-package com.nownow.softpos.creditCardNfcReader.exception;
+package com.aicortex.softpos.creditCardNfcReader.exception;
 
 /**
  * Exception during TLV reading

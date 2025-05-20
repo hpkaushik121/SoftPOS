@@ -1,4 +1,4 @@
-package com.nownow.softpos.utilities;
+package com.aicortex.softpos.utilities;
 
 import java.util.Calendar;
 import java.util.Locale;

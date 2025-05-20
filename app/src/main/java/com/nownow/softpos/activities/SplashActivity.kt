@@ -1,4 +1,4 @@
-package com.nownow.softpos.activities
+package com.aicortex.softpos.activities
 
 import android.content.ActivityNotFoundException
 import android.content.Context
@@ -14,14 +14,14 @@ import android.view.View
 import android.view.WindowManager
 import androidx.databinding.DataBindingUtil
 import com.google.gson.Gson
-import com.nownow.softpos.BuildConfig
-import com.nownow.softpos.R
-import com.nownow.softpos.api.ApiCalls
-import com.nownow.softpos.databinding.ActivitySplashBinding
-import com.nownow.softpos.models.appConfig.AppConfigRequestModel
-import com.nownow.softpos.models.appConfig.AppConfigResponse
-import com.nownow.softpos.network.ServiceBuilder
-import com.nownow.softpos.utils.*
+import com.aicortex.softpos.BuildConfig
+import com.aicortex.softpos.R
+import com.aicortex.softpos.api.ApiCalls
+import com.aicortex.softpos.databinding.ActivitySplashBinding
+import com.aicortex.softpos.models.appConfig.AppConfigRequestModel
+import com.aicortex.softpos.models.appConfig.AppConfigResponse
+import com.aicortex.softpos.network.ServiceBuilder
+import com.aicortex.softpos.utils.*
 import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response

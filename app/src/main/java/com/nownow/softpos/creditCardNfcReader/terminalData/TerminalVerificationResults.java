@@ -1,7 +1,7 @@
-package com.nownow.softpos.creditCardNfcReader.terminalData;
+package com.aicortex.softpos.creditCardNfcReader.terminalData;
 
 
-import com.nownow.softpos.creditCardNfcReader.utils.BytesUtils;
+import com.aicortex.softpos.creditCardNfcReader.utils.BytesUtils;
 
 import java.io.PrintWriter;
 import java.io.StringWriter;

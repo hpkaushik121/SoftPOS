@@ -1,8 +1,8 @@
-package com.nownow.softpos.creditCardNfcReader.enums;
+package com.aicortex.softpos.creditCardNfcReader.enums;
 
 //import id.paypro.nfc.creditCardNfcReader.utils.BytesUtils;
 
-import com.nownow.softpos.creditCardNfcReader.utils.BytesUtils;
+import com.aicortex.softpos.creditCardNfcReader.utils.BytesUtils;
 
 /**
  * List of status word (last 2 bytes) in APDU response<br/>

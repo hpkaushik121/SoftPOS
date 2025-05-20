@@ -1,8 +1,8 @@
-package com.nownow.softpos.creditCardNfcReader.parser.apdu.annotation;
+package com.aicortex.softpos.creditCardNfcReader.parser.apdu.annotation;
 
-import com.nownow.softpos.creditCardNfcReader.iso7816emv.ITag;
-import com.nownow.softpos.creditCardNfcReader.model.EmvTransactionRecord;
-import com.nownow.softpos.creditCardNfcReader.parser.apdu.IFile;
+import com.aicortex.softpos.creditCardNfcReader.iso7816emv.ITag;
+import com.aicortex.softpos.creditCardNfcReader.model.EmvTransactionRecord;
+import com.aicortex.softpos.creditCardNfcReader.parser.apdu.IFile;
 
 import java.lang.reflect.Field;
 import java.util.HashMap;

@@ -1,4 +1,4 @@
-package com.nownow.softpos.models.dashboard
+package com.aicortex.softpos.models.dashboard
 
 data class WalletInfo(
     val wallet: List<Wallet>

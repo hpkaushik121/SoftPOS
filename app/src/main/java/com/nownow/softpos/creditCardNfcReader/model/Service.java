@@ -1,10 +1,10 @@
-package com.nownow.softpos.creditCardNfcReader.model;
+package com.aicortex.softpos.creditCardNfcReader.model;
 
-import com.nownow.softpos.creditCardNfcReader.model.enums.ServiceCode1Enum;
-import com.nownow.softpos.creditCardNfcReader.model.enums.ServiceCode2Enum;
-import com.nownow.softpos.creditCardNfcReader.model.enums.ServiceCode3Enum;
-import com.nownow.softpos.creditCardNfcReader.utils.BytesUtils;
-import com.nownow.softpos.creditCardNfcReader.utils.EnumUtils;
+import com.aicortex.softpos.creditCardNfcReader.model.enums.ServiceCode1Enum;
+import com.aicortex.softpos.creditCardNfcReader.model.enums.ServiceCode2Enum;
+import com.aicortex.softpos.creditCardNfcReader.model.enums.ServiceCode3Enum;
+import com.aicortex.softpos.creditCardNfcReader.utils.BytesUtils;
+import com.aicortex.softpos.creditCardNfcReader.utils.EnumUtils;
 
 import org.apache.commons.lang3.StringUtils;
 

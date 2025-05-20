@@ -1,4 +1,4 @@
-package com.nownow.softpos.models.softpos
+package com.aicortex.softpos.models.softpos
 
 import android.os.Parcel
 import com.google.gson.annotations.SerializedName

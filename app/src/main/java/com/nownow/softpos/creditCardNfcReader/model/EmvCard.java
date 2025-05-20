@@ -1,10 +1,10 @@
-package com.nownow.softpos.creditCardNfcReader.model;
+package com.aicortex.softpos.creditCardNfcReader.model;
 
 
 
-import com.nownow.softpos.creditCardNfcReader.enums.EmvCardScheme;
-import com.nownow.softpos.creditCardNfcReader.terminalData.CVMList;
-import com.nownow.softpos.creditCardNfcReader.terminalData.TransactionStatusInformation;
+import com.aicortex.softpos.creditCardNfcReader.enums.EmvCardScheme;
+import com.aicortex.softpos.creditCardNfcReader.terminalData.CVMList;
+import com.aicortex.softpos.creditCardNfcReader.terminalData.TransactionStatusInformation;
 
 import java.util.Collection;
 import java.util.List;
@@ -72,7 +72,7 @@ public class EmvCard extends AbstractData {
 	/**
 	 * Cardholder Verification Method (CVM) List
 	 */
-	private com.nownow.softpos.creditCardNfcReader.terminalData.CVMList CVMList;
+	private com.aicortex.softpos.creditCardNfcReader.terminalData.CVMList CVMList;
 
 	/**
 	 * List of issued payment
@@ -381,7 +381,7 @@ public class EmvCard extends AbstractData {
 	 *
 	 * @return the CVMList
 	 */
-	public com.nownow.softpos.creditCardNfcReader.terminalData.CVMList getCVMList() {
+	public com.aicortex.softpos.creditCardNfcReader.terminalData.CVMList getCVMList() {
 		return CVMList;
 	}
 

@@ -1,4 +1,4 @@
-package com.nownow.softpos.models
+package com.aicortex.softpos.models
 
 import android.os.CountDownTimer
 import androidx.lifecycle.ViewModel

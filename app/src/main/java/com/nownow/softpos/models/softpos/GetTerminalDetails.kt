@@ -1,8 +1,8 @@
-package com.nownow.softpos.models.softpos
+package com.aicortex.softpos.models.softpos
 
 import com.google.gson.annotations.SerializedName
 import com.google.gson.annotations.Expose
-import com.nownow.softpos.models.softpos.MposPtsp
+import com.aicortex.softpos.models.softpos.MposPtsp
 
 class GetTerminalDetails(
     @SerializedName("message")

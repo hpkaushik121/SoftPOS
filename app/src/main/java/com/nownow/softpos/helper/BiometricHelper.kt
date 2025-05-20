@@ -1,4 +1,4 @@
-package com.nownow.softpos.helper
+package com.aicortex.softpos.helper
 
 import android.content.Context
 import android.content.Context.FINGERPRINT_SERVICE
@@ -15,8 +15,8 @@ import androidx.biometric.BiometricPrompt
 import androidx.biometric.FingerprintDialogFragment
 import androidx.core.content.ContextCompat
 import androidx.fragment.app.FragmentActivity
-import com.nownow.softpos.utils.IBiometricListener
-import com.nownow.softpos.utils.UtilHandler
+import com.aicortex.softpos.utils.IBiometricListener
+import com.aicortex.softpos.utils.UtilHandler
 import java.util.concurrent.Executor
 
 object BiometricHelper {

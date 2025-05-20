@@ -1,6 +1,6 @@
 <resources>
     <!--<string name="app_name">Tap &amp; Pay</string>-->
-    <string name="login_with">Proceed with either your registered email address or NowNow Wallet ID.</string>
+    <string name="login_with">Proceed with either your registered email address or aicortex Wallet ID.</string>
     <string name="wallet_id">Wallet ID</string>
     <string name="proceed">Proceed</string>
     <string name="check_transaction">Check Transaction</string>
@@ -173,7 +173,7 @@
     <string name="input_preferred_amount">Input Preferred Amount</string>
     <string name="payment_details">Payment Details</string>
     <string name="remark">Remark</string>
-    <string name="copyright_text">(c) NowNow Digital Systems Limited, 2023</string>
+    <string name="copyright_text">(c) aicortex Digital Systems Limited, 2023</string>
     <string name="please_login_with_email">Please login with your registered email address.</string>
     <string name="please_login_with_wallet">Please login with your Wallet ID.</string>
     <string name="kindly_add_6digit_number">Kindly add the 6-digit number sent to your phone.</string>

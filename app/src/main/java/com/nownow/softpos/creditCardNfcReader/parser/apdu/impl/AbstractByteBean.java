@@ -1,11 +1,11 @@
-package com.nownow.softpos.creditCardNfcReader.parser.apdu.impl;
+package com.aicortex.softpos.creditCardNfcReader.parser.apdu.impl;
 
-import com.nownow.softpos.creditCardNfcReader.iso7816emv.ITag;
-import com.nownow.softpos.creditCardNfcReader.iso7816emv.TagAndLength;
-import com.nownow.softpos.creditCardNfcReader.model.AbstractData;
-import com.nownow.softpos.creditCardNfcReader.parser.apdu.IFile;
-import com.nownow.softpos.creditCardNfcReader.parser.apdu.annotation.AnnotationData;
-import com.nownow.softpos.creditCardNfcReader.parser.apdu.annotation.AnnotationUtils;
+import com.aicortex.softpos.creditCardNfcReader.iso7816emv.ITag;
+import com.aicortex.softpos.creditCardNfcReader.iso7816emv.TagAndLength;
+import com.aicortex.softpos.creditCardNfcReader.model.AbstractData;
+import com.aicortex.softpos.creditCardNfcReader.parser.apdu.IFile;
+import com.aicortex.softpos.creditCardNfcReader.parser.apdu.annotation.AnnotationData;
+import com.aicortex.softpos.creditCardNfcReader.parser.apdu.annotation.AnnotationUtils;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;

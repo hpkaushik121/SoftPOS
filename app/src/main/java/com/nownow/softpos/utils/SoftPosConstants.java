@@ -1,4 +1,4 @@
-package com.nownow.softpos.utils;
+package com.aicortex.softpos.utils;
 
 import android.util.Log;
 import org.apache.commons.lang3.RandomStringUtils;
@@ -9,9 +9,9 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
-import com.nownow.softpos.creditCardNfcReader.parser.TLV;
-import com.nownow.softpos.creditCardNfcReader.parser.TLVParser;
-import com.nownow.softpos.mpos.TripleDesCipher;
+import com.aicortex.softpos.creditCardNfcReader.parser.TLV;
+import com.aicortex.softpos.creditCardNfcReader.parser.TLVParser;
+import com.aicortex.softpos.mpos.TripleDesCipher;
 
 import org.jpos.iso.ISOMsg;
 /**

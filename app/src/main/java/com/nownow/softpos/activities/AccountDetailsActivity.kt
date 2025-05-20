@@ -1,4 +1,4 @@
-package com.nownow.softpos.activities
+package com.aicortex.softpos.activities
 
 import android.content.Intent
 import android.os.Bundle
@@ -7,18 +7,18 @@ import android.util.Log
 import android.view.View
 import androidx.databinding.DataBindingUtil
 import com.google.gson.Gson
-import com.nownow.softpos.BuildConfig
-import com.nownow.softpos.R
-import com.nownow.softpos.api.ApiCalls
-import com.nownow.softpos.databinding.ActivityAccountDetailsBinding
-import com.nownow.softpos.models.core.request.*
-import com.nownow.softpos.models.core.response.CoreResponseModel
-import com.nownow.softpos.models.dashboard.TransactionInfo
-import com.nownow.softpos.network.ServiceBuilder
-import com.nownow.softpos.utils.Constants
-import com.nownow.softpos.utils.Logger
-import com.nownow.softpos.utils.SharedPrefUtils
-import com.nownow.softpos.utils.UtilHandler
+import com.aicortex.softpos.BuildConfig
+import com.aicortex.softpos.R
+import com.aicortex.softpos.api.ApiCalls
+import com.aicortex.softpos.databinding.ActivityAccountDetailsBinding
+import com.aicortex.softpos.models.core.request.*
+import com.aicortex.softpos.models.core.response.CoreResponseModel
+import com.aicortex.softpos.models.dashboard.TransactionInfo
+import com.aicortex.softpos.network.ServiceBuilder
+import com.aicortex.softpos.utils.Constants
+import com.aicortex.softpos.utils.Logger
+import com.aicortex.softpos.utils.SharedPrefUtils
+import com.aicortex.softpos.utils.UtilHandler
 import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response
@@ -52,7 +52,7 @@ class AccountDetailsActivity : BaseActivity(), View.OnClickListener {
             mBinding.editWid.setText(SharedPrefUtils.msisdn)
         }
 
-        mBinding.editInputBankName.setText("NowNow Digital Systems Ltd")
+        mBinding.editInputBankName.setText("aicortex Digital Systems Ltd")
         disableCheckTranButton()
         startTimer()
     }

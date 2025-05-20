@@ -1,4 +1,4 @@
-package com.nownow.softpos.models.downloadPdfModels
+package com.aicortex.softpos.models.downloadPdfModels
 
 data class DownloadPdfRequest(
     val email_id: String? = null,

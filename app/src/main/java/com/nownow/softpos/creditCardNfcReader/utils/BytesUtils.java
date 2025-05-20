@@ -1,4 +1,4 @@
-package com.nownow.softpos.creditCardNfcReader.utils;
+package com.aicortex.softpos.creditCardNfcReader.utils;
 
 import java.math.BigInteger;
 import java.util.Locale;

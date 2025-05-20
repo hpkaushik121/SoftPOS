@@ -1,4 +1,4 @@
-package com.nownow.softpos.models.softpos
+package com.aicortex.softpos.models.softpos
 
 class FloorLimitResponse( var floorLimit:Int = 0,
                           var message: String? = null,

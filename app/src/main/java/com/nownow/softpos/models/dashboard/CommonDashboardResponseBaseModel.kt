@@ -1,4 +1,4 @@
-package com.nownow.softpos.models.dashboard
+package com.aicortex.softpos.models.dashboard
 
 import com.google.gson.annotations.SerializedName
 

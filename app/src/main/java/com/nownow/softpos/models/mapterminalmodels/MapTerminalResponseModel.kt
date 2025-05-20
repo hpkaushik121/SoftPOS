@@ -1,4 +1,4 @@
-package com.nownow.softpos.models.mapterminalmodels
+package com.aicortex.softpos.models.mapterminalmodels
 
 import com.google.gson.annotations.SerializedName
 

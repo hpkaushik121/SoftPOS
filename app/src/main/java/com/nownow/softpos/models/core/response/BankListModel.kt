@@ -1,7 +1,7 @@
-package com.nownow.softpos.models.core.response
+package com.aicortex.softpos.models.core.response
 import com.google.gson.annotations.SerializedName
 import com.google.gson.annotations.Expose
-import com.nownow.softpos.models.core.response.BankListData
+import com.aicortex.softpos.models.core.response.BankListData
 class BankListModel(
     @SerializedName("status_code")
     @Expose

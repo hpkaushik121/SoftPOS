@@ -1,4 +1,4 @@
-package com.nownow.softpos.creditCardNfcReader.enums;
+package com.aicortex.softpos.creditCardNfcReader.enums;
 
 public enum TagTypeEnum {
 
