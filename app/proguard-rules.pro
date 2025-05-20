@@ -25,17 +25,9 @@
 -keep public class com.android.installreferrer.** { *; }
 -ignorewarnings
 -keep class org.** { *; }
--keep class com.nownow.** { *; }
--dontwarn com.nownow.**
 -keepattributes *Annotation*
 -keep class retrofit.** { *; }
 -keepclasseswithmembers class * {
 @retrofit.http.* <methods>; }
 -keepattributes Signature
--keepclasseswithmembers class com.nownow.softpos.models.** {
-    private <fields>;
-}
--keepclasseswithmembers class com.nownow.softpos.models.downloadPdfModels.** {
-    private <fields>;
-}
 -keep class androidx.appcompat.widget.** { *; }
